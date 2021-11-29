@@ -6,12 +6,6 @@ var stopChangeImg = false;
 function changeImg() {
 
     if (stopChangeImg) {
-
-        for (let j = 1; j <= 3; j++) {
-            $(".image_slide" + j).css("z-index", '0');
-            $(".image_slide" + j + ">div>img").css("display", "block");
-        }
-        $(".image_slide" + 1).css("z-index", '1');
         return;
     }
 
@@ -49,7 +43,6 @@ function changeImg() {
 
 
 function loading_logo_anim() {
-
     $("#loading_logo").css("animation", 'none');
     $("#loading_logo").css("animation", 'fade 3s forwards');
     setTimeout(() => {
@@ -73,7 +66,6 @@ function loading_logo_anim() {
 
 
 function makeNewPosition() {
-
     // Get viewport dimensions (remove the dimension of the div)
     var h = $(window).height() - 50;
     var w = $(window).width() - 50;
@@ -91,30 +83,6 @@ function animateDiv(myclass) {
     });
 };
 
-function showForm() {
-    console.log("show form")
-    stopChangeImg = true;
-
-    setTimeout(function() {
-        $(".overbox").css({
-            "overflow": "hidden"
-        })
-        $(".overbox").addClass("back");
-    }, 200)
-    $(this).addClass('active').animate({
-        "width": "700px",
-        "height": "700px"
-    });
-
-    setTimeout(function() {
-        $("#loginBtn").fadeIn(300);
-    }, 700)
-
-
-    // $("#loginBtn").removeClass("d-flex");
-    // $("#loginBtn").fadeOut();
-    $("#form").fadeIn();
-}
 
 function onBubbleClicked() {
     $("#bubble").css("animation", 'none');
@@ -127,7 +95,6 @@ function onBubbleClicked() {
 }
 
 window.onload = function() {
-    $("#loginBtn").click(showForm);
     $("#bubble").click(onBubbleClicked);
 
     setTimeout("loading_logo_anim()", 6150);
@@ -137,6 +104,12 @@ window.onload = function() {
 
     $(".material-button").click(function() {
         stopChangeImg = true;
+        $(".image_slide" + 1).css("z-index", '2');
+        for (let j = 2; j <= 3; j++) {
+            $(".image_slide" + j).css("z-index", '0');
+            $(".image_slide" + j + ">div>img").css("display", "block");
+        }
+
 
         if ($(this).hasClass('material-button')) {
             setTimeout(function() {
@@ -172,21 +145,20 @@ window.onload = function() {
             $(".alt-2").removeClass('material-buton');
             $(".alt-2").addClass('material-button');
         }
-
     });
 
 
     const cursor = document.getElementById("cursor");
     document.addEventListener("mousemove", e => {
         cursor.setAttribute("style", `top: ${e.pageY -10 }px; left: ${e.pageX -10}px;`);
-
     });
+
 
     $(".material-button").mouseover(function() {
         $("#cursor").addClass("login_cursor");
-    })
+    });
 
-    $(".material-button").mouseleave(function() {
+    $(".material-button").mouseout(function() {
         $("#cursor").removeClass("login_cursor");
-    })
+    });
 }
