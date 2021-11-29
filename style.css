@@ -1,0 +1,177 @@
+.sticky_pos {
+    position: absolute;
+    top: 0;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+
+#loading_logo_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.image_slide1,
+.image_slide2,
+.image_slide3 {
+    height: 100vh;
+    position: absolute;
+}
+
+.image_slide1>img,
+.image_slide2>img,
+.image_slide3>img,
+.banner4>img {
+    width: 300px;
+    height: 500px;
+    border-radius: 20px;
+}
+
+.image_slide1,
+.image_slide2,
+.image_slide3 {
+    top: 10%;
+    left: 12%;
+    animation: slide 2s;
+    animation-fill-mode: forwards;
+    border-radius: 20px;
+    transition: top 2s;
+}
+
+.hideImportant {
+    display: none !important;
+}
+
+#loading_logo {
+    width: 100px;
+    height: 100px;
+    /* background-color: #1E88E5; */
+    border: 0;
+    animation-fill-mode: both;
+    animation: bounceInDown;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    position: absolute;
+    transition: all 2s;
+}
+
+.bubble {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0 10px 30px 5px rgba(255, 255, 255, 1);
+    -moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0 10px 30px 5px rgba(255, 255, 255, 1);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0 10px 30px 5px rgba(255, 255, 255, 1);
+    height: 200px;
+    position: absolute;
+    width: 200px;
+    transition: all 2s;
+}
+
+.bubble:after {
+    background: -moz-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
+    /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255, 255, 255, 0.5)), color-stop(70%, rgba(255, 255, 255, 0)));
+    /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
+    /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
+    /* IE10+ */
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
+    /* W3C */
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#80ffffff', endColorstr='#00ffffff', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
+    -moz-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
+    content: "";
+    height: 180px;
+    left: 10px;
+    position: absolute;
+    width: 180px;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+        left: 50%;
+    }
+    60% {
+        opacity: 0.7;
+        left: 25%;
+    }
+    100% {
+        opacity: 0;
+        left: 21.5%;
+        top: 42.5%;
+    }
+}
+
+@keyframes bounceInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-2000px);
+    }
+    40% {
+        opacity: 1;
+        transform: translateY(100px);
+    }
+    60% {
+        transform: translateY(-50px);
+    }
+    80% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide {
+    0% {
+        top: -100%;
+    }
+    100% {
+        top: 10%;
+    }
+}
+
+@keyframes pop {
+    0% {
+        opacity: 1;
+        transform: translateZ(0) scale(1, 1);
+    }
+    50% {
+        opacity: 0.50;
+        transform: translateZ(0) scale(1.25, 1.25);
+    }
+    100% {
+        opacity: 0;
+        display: none;
+        transform: translateZ(0) scale(1.75, 1.75);
+    }
+}
+
+@keyframes createBubble {
+    0% {
+        opacity: 0;
+        display: none;
+        transform: translateZ(0) scale(0.25, 0.25);
+    }
+    50% {
+        opacity: 0.50;
+        transform: translateZ(0) scale(0.75, 0.75);
+    }
+    100% {
+        opacity: 1;
+        transform: translateZ(0) scale(1, 1);
+    }
+}
