@@ -22,6 +22,14 @@ function changeImg() {
         $(".image_slide" + j).css("z-index", '0');
     }
 
+    let c = i;
+
+    setTimeout(function() {
+        $(".image_slide" + c + ">div>img").css("display", "block");
+        $(".image_slide" + c).css("animation", 'slideDown 2s');
+        $(".image_slide" + c).css("z-index", '1');
+    }, 200);
+
     $(".image_slide" + i).css("z-index", '1');
     if (i === 3) {
         i = 1;
@@ -41,24 +49,21 @@ function changeImg() {
 
 
 function loading_logo_anim() {
-    // $("#loading_logo_container").fadeOut();
 
     $("#loading_logo").css("animation", 'none');
-    // $("#loading_logo").css("position" , 'absolute');
     $("#loading_logo").css("animation", 'fade 3s forwards');
     setTimeout(() => {
         $("#loading_logo_container").css('background', 'transparent');
         $("#loading_logo_container").removeClass('d-flex');
         $("#loading_logo_container").fadeOut();
-        console.log("hide");
-        console.log($("#loading_logo_container")[0]);
     }, 2000);
 
     setTimeout(function() {
         $("#bubble").css("animation", 'none');
         $("#bubble").css("animation", 'createBubble 2s cubic-bezier(0.16,0.87,0.48,0.99) forwards');
-    }, 1000)
-    setTimeout("animateDiv('.bubble');", 2000)
+    }, 1000);
+
+    setTimeout("animateDiv('.bubble');", 2000);
 
     setTimeout(function() {
         $("#main_container").attr("style", "");
