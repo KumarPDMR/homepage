@@ -165,10 +165,6 @@ body {
     width: 180px;
 }
 
-.material-button {
-    cursor: url("./user-solid.png"), auto;
-}
-
 .material-button .shape:before,
 .material-button .shape:after {
     transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -191,7 +187,7 @@ body {
     width: 140px;
     height: 140px;
     border-radius: 50%;
-    background: #ED2553;
+    background: #0288d1;
     position: absolute;
     top: 37%;
     right: 18%;
@@ -258,8 +254,12 @@ body {
 .material-button>span {
     color: white;
     position: absolute;
-    top: 40%;
-    left: 30%;
+    top: 33%;
+    left: 38%;
+}
+
+.material-button>span>i {
+    font-size: 40px;
 }
 
 .box {
@@ -270,12 +270,29 @@ body {
     padding: 60px 50px 40px 50px;
     width: 300px;
     height: 500px;
-    background: #ED2553;
+    background: #0288d1;
     border-radius: 10px;
     transform: scale(1);
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     z-index: 5;
+}
+
+.closeIcon {
+    position: absolute;
+    top: -5%;
+    background: #80d8ff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    right: -5%;
+}
+
+.closeIcon>i {
+    position: absolute;
+    right: 37%;
+    top: 33%;
+    color: white;
 }
 
 .box.back {
@@ -303,19 +320,19 @@ body {
 }
 
 .shine {
-    position: relative;
+    /* position: relative; */
     overflow: hidden;
-    width: 50px;
-    height: 50px;
-    display: inline-block;
-    margin: 25px 0 25px 25px;
-    border-radius: 5px;
-    color: #fff;
-    text-decoration: none;
-    text-align: center;
-    line-height: 50px;
-    font-size: 12px;
-    font-family: sans-serif;
+    /* width: 50px; */
+    /* height: 50px; */
+    /* display: inline-block; */
+    /* margin: 25px 0 25px 25px; */
+    /* border-radius: 5px; */
+    /* color: #fff; */
+    /* text-decoration: none; */
+    /* text-align: center; */
+    /* line-height: 50px; */
+    /* font-size: 12px; */
+    /* font-family: sans-serif; */
 }
 
 
@@ -344,6 +361,8 @@ body {
 .shine:active:after {
     opacity: 0;
 }
+
+.closeIcon {}
 
 @keyframes shine {
     10% {

@@ -4,27 +4,23 @@ var stopChangeImg = false;
 
 
 function changeImg() {
-
     if (stopChangeImg) {
         return;
     }
 
-    $(".image_slide" + i).css("animation", 'none');
-    $(".image_slide" + i + ">div>img").css("display", "none");
-
     for (let j = 1; j <= 3; j++) {
-        $(".image_slide" + j).css("z-index", '0');
+        $(".image_slide" + j).css("animation", 'none');
+        if (j === i) continue;
+        $(".image_slide" + j).css("z-index", '-3');
     }
 
-    let c = i;
+    let currentIndex = i;
 
     setTimeout(function() {
-        $(".image_slide" + c + ">div>img").css("display", "block");
-        $(".image_slide" + c).css("animation", 'slideDown 2s');
-        $(".image_slide" + c).css("z-index", '1');
+        $(".image_slide" + currentIndex).css("animation", 'slideDown 2s');
+        $(".image_slide" + currentIndex).css("z-index", '1');
     }, 200);
 
-    $(".image_slide" + i).css("z-index", '1');
     if (i === 3) {
         i = 1;
     } else {
@@ -32,7 +28,6 @@ function changeImg() {
     }
 
     setTimeout(function() {
-        $(".image_slide" + i + ">div>img").css("display", "block");
         $(".image_slide" + i).css("animation", 'slide 2s');
         $(".image_slide" + i).css("z-index", '2');
     }, 0);
@@ -98,6 +93,7 @@ window.onload = function() {
     $("#bubble").click(onBubbleClicked);
 
     setTimeout("loading_logo_anim()", 6150);
+
     for (let j = 1; j <= 3; j++) {
         $(".image_slide" + j).css("animation", 'none');
     }
@@ -110,7 +106,6 @@ window.onload = function() {
             $(".image_slide" + j + ">div>img").css("display", "block");
         }
 
-
         if ($(this).hasClass('material-button')) {
             setTimeout(function() {
                 $(".overbox").css({
@@ -118,54 +113,45 @@ window.onload = function() {
                 })
                 $(".box").addClass("back");
             }, 200)
-            $(this).addClass('active').animate({
+            $(this).addClass("active").animate({
                 "width": "300px",
                 "height": "500px"
             });
 
             setTimeout(function() {
-                $(".shape").css({
-                    "width": "50%",
-                    "height": "50%",
-                    "transform": "rotate(45deg)"
-                })
-
-                $(".overbox .title").fadeIn(300);
-                $(".overbox .input").fadeIn(300);
-                $(".overbox .button").fadeIn(300);
                 $(".box").fadeIn(300);
                 $(".material-button").fadeOut();
             }, 700)
-
-            // $(this).removeClass('material-button');
-
         }
 
-        if ($(".alt-2").hasClass('material-buton')) {
-            $(".alt-2").removeClass('material-buton');
-            $(".alt-2").addClass('material-button');
-        }
     });
-
 
     const cursor = document.getElementById("cursor");
     document.addEventListener("mousemove", e => {
         cursor.setAttribute("style", `top: ${e.pageY -10 }px; left: ${e.pageX -10}px;`);
     });
 
+    $(".material-button").mouseenter(function() {
+        if ($(".material-button:hover").length !== 0) {
+            $("#cursor").addClass("login_cursor");
+        }
+    });
 
+    $(".material-button").mouseout(function() {
+        if ($(".material-button:hover").length === 0) {
+            $("#cursor").removeClass("login_cursor");
+        }
+    });
 
-    // $(".material-button").mouseenter(function() {
-    //     if ($(".material-button:hover").length !== 0) {
-    //         $("#cursor").addClass("login_cursor");
-    //     }
-    // });
-
-    // $(".material-button").mouseout(function() {
-    //     if ($(".material-button:hover").length === 0) {
-    //         $("#cursor").removeClass("login_cursor");
-    //     }
-    // });
-
-
+    $(".closeIcon").click(function() {
+        $(".material-button").fadeIn();
+        $(".box").fadeOut();
+        $(".material-button").animate({
+            "width": "140px",
+            "height": "140px"
+        });
+        stopChangeImg = false;
+        i = 1;
+        setTimeout("changeImg()", 6000);
+    });
 }
