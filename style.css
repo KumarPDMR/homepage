@@ -127,8 +127,17 @@ body {
     60% {
         transform: translateY(-50px);
     }
-    80% {
+    70% {
         transform: translateY(-10px);
+    }
+    80% {
+        transform: translateY(-20px);
+    }
+    85% {
+        transform: translateY(0);
+    }
+    70% {
+        transform: translateY(-5px);
     }
     100% {
         transform: translateY(0);
@@ -138,6 +147,18 @@ body {
 @keyframes slide {
     0% {
         top: -100%;
+    }
+    80% {
+        top: 10%;
+    }
+    85% {
+        top: 12%;
+    }
+    90% {
+        top: 10%;
+    }
+    95% {
+        top: 11%;
     }
     100% {
         top: 10%;

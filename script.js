@@ -33,7 +33,7 @@ function changeImg() {
     }, 0);
 
 
-    setTimeout("changeImg()", 6000);
+    setTimeout("changeImg()", 7000);
 }
 
 
