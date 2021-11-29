@@ -13,7 +13,7 @@ html {
 
 .login_cursor {
     background-color: #e1bee7 !important;
-    background-image: url("user-solid.svg");
+    content: "LOGIN";
     width: 50px !important;
     height: 50px !important;
     background-size: 25px;
