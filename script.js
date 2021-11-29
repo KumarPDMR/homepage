@@ -14,13 +14,13 @@ function changeImg() {
     }
 
     $(".image_slide" + i).css("animation", 'none');
+    $(".image_slide" + i + ">div>img").css("display", "none");
 
     for (let j = 1; j <= 3; j++) {
         $(".image_slide" + j).css("z-index", '0');
     }
 
     $(".image_slide" + i).css("z-index", '1');
-
     if (i === 3) {
         i = 1;
     } else {
@@ -28,6 +28,7 @@ function changeImg() {
     }
 
     setTimeout(function() {
+        $(".image_slide" + i + ">div>img").css("display", "block");
         $(".image_slide" + i).css("animation", 'slide 2s');
         $(".image_slide" + i).css("z-index", '2');
     }, 0);
