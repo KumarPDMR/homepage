@@ -165,6 +165,10 @@ body {
     width: 180px;
 }
 
+.material-button {
+    cursor: url("./user-solid.png"), auto;
+}
+
 .material-button .shape:before,
 .material-button .shape:after {
     transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);

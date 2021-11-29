@@ -154,11 +154,18 @@ window.onload = function() {
     });
 
 
-    $(".material-button").mouseover(function() {
-        $("#cursor").addClass("login_cursor");
-    });
 
-    $(".material-button").mouseout(function() {
-        $("#cursor").removeClass("login_cursor");
-    });
+    // $(".material-button").mouseenter(function() {
+    //     if ($(".material-button:hover").length !== 0) {
+    //         $("#cursor").addClass("login_cursor");
+    //     }
+    // });
+
+    // $(".material-button").mouseout(function() {
+    //     if ($(".material-button:hover").length === 0) {
+    //         $("#cursor").removeClass("login_cursor");
+    //     }
+    // });
+
+
 }
