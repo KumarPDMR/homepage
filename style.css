@@ -1,8 +1,3 @@
-.sticky_pos {
-    position: absolute;
-    top: 0;
-}
-
 body {
     height: 100vh;
     overflow: hidden;
