@@ -6,8 +6,10 @@ var stopChangeImg = false;
 function changeImg() {
 
     if (stopChangeImg) {
+
         for (let j = 1; j <= 3; j++) {
             $(".image_slide" + j).css("z-index", '0');
+            $(".image_slide" + j + ">div>img").css("display", "block");
         }
         $(".image_slide" + 1).css("z-index", '1');
         return;
@@ -129,6 +131,7 @@ window.onload = function() {
     }
 
     $(".material-button").click(function() {
+        stopChangeImg = true;
 
         if ($(this).hasClass('material-button')) {
             setTimeout(function() {
