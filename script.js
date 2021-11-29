@@ -177,7 +177,7 @@ window.onload = function() {
 
     });
 
-    $(".material-button").mouseenter(function() {
+    $(".material-button").mouseover(function() {
         $("#cursor").addClass("login_cursor");
     })
 

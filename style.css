@@ -64,8 +64,8 @@ body {
 }
 
 #loading_logo {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     /* background-color: #1E88E5; */
     border: 0;
     animation-fill-mode: both;
