@@ -173,7 +173,15 @@ window.onload = function() {
 
     const cursor = document.getElementById("cursor");
     document.addEventListener("mousemove", e => {
-        cursor.setAttribute("style", `top: ${e.pageY}px; left: ${e.pageX}px;`)
+        cursor.setAttribute("style", `top: ${e.pageY -10 }px; left: ${e.pageX -10}px;`);
+
+    });
+
+    $(".material-button").mouseenter(function() {
+        $("#cursor").addClass("login_cursor");
     })
 
+    $(".material-button").mouseleave(function() {
+        $("#cursor").removeClass("login_cursor");
+    })
 }
