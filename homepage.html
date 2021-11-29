@@ -34,9 +34,33 @@
             <div class="image_slide2"> <img src="./slide2.jpg" alt=""> </div>
             <div class="image_slide3"> <img src="./slide3.jpg" alt=""> </div>
         </div>
-        <div class="w-50 h-100 d-flex justify-content-center align-items-center text-white" style="background-color: transparent;">
-            <button id=loginBtn class="rounded-circle d-flex justify-content-center align-items-center text-white" style="width: 100px;height: 100px;background-color: #1E88E5;border: 0;z-index:11;"> login </button>
-            <div id="form" class="form d-flex justify-content-center align-items-center" style="display:none !important;width: 300px;height: 500px;background-color: cadetblue;border-radius: 20px;z-index:11;"> </div>
+        <div class="w-50 h-100 overbox" style="background-color: transparent;">
+            <div class="material-button alt-2"><span class="shape"></span></div>
+
+            <!-- <button id=loginBtn class="shine rounded-circle d-flex justify-content-center align-items-center text-white" style="width: 100px;height: 100px;background-color: #1E88E5;border: 0;z-index:11;font-size: 24px;text-transform: uppercase;"> login </button> -->
+            <div class="box">
+
+                <div class="title">LOGIN</div>
+
+                <div class="input">
+                    <label for="name">Username</label>
+                    <input type="text" name="name" id="name">
+                    <span class="spin"></span>
+                </div>
+
+                <div class="input">
+                    <label for="pass">Password</label>
+                    <input type="password" name="pass" id="pass">
+                    <span class="spin"></span>
+                </div>
+
+                <div class="button login">
+                    <button><span>GO</span> <i class="fa fa-check"></i></button>
+                </div>
+
+                <a href="" class="pass-forgot">Forgot your password?</a>
+
+            </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

@@ -82,16 +82,30 @@ function animateDiv(myclass) {
     $(myclass).animate({ top: newq[0], left: newq[1] }, 3000, function() {
         animateDiv(myclass);
     });
-
 };
 
 function showForm() {
     console.log("show form")
     stopChangeImg = true;
 
+    setTimeout(function() {
+        $(".overbox").css({
+            "overflow": "hidden"
+        })
+        $(".overbox").addClass("back");
+    }, 200)
+    $(this).addClass('active').animate({
+        "width": "700px",
+        "height": "700px"
+    });
 
-    $("#loginBtn").removeClass("d-flex");
-    $("#loginBtn").fadeOut();
+    setTimeout(function() {
+        $("#loginBtn").fadeIn(300);
+    }, 700)
+
+
+    // $("#loginBtn").removeClass("d-flex");
+    // $("#loginBtn").fadeOut();
     $("#form").fadeIn();
 }
 
@@ -114,4 +128,42 @@ window.onload = function() {
         $(".image_slide" + j).css("animation", 'none');
     }
 
+    $(".material-button").click(function() {
+
+        if ($(this).hasClass('material-button')) {
+            setTimeout(function() {
+                $(".overbox").css({
+                    "overflow": "hidden"
+                })
+                $(".box").addClass("back");
+            }, 200)
+            $(this).addClass('active').animate({
+                "width": "300px",
+                "height": "500px"
+            });
+
+            setTimeout(function() {
+                $(".shape").css({
+                    "width": "50%",
+                    "height": "50%",
+                    "transform": "rotate(45deg)"
+                })
+
+                $(".overbox .title").fadeIn(300);
+                $(".overbox .input").fadeIn(300);
+                $(".overbox .button").fadeIn(300);
+                $(".box").fadeIn(300);
+                $(".material-button").fadeOut();
+            }, 700)
+
+            // $(this).removeClass('material-button');
+
+        }
+
+        if ($(".alt-2").hasClass('material-buton')) {
+            $(".alt-2").removeClass('material-buton');
+            $(".alt-2").addClass('material-button');
+        }
+
+    });
 }
