@@ -92,10 +92,10 @@ function onBubbleClicked() {
 function onLoginButtonClicked() {
     console.log("clicked");
     stopChangeImg = true;
-    $(".image_slide" + 1).css("z-index", '1');
+
+    $(".image_slide" + 1).css("z-index", '2');
     for (let j = 2; j <= 3; j++) {
-        $(".image_slide" + j).css("z-index", '0');
-        $(".image_slide" + j + ">div>img").css("display", "block");
+        $(".image_slide" + j).css("z-index", '');
     }
 
     if ($(this).hasClass('material-button')) {
@@ -104,7 +104,8 @@ function onLoginButtonClicked() {
                 "overflow": "hidden"
             })
             $(".box").addClass("back");
-        }, 200)
+        }, 200);
+
         $(this).addClass("active").animate({
             "width": "300px",
             "height": "500px"
@@ -114,7 +115,7 @@ function onLoginButtonClicked() {
             $(".box").fadeIn(300);
             $(".closeIcon").fadeIn(300);
             $(".material-button").fadeOut();
-        }, 700)
+        }, 700);
     }
 }
 
@@ -132,27 +133,31 @@ function onLoginCloseClicked() {
     setTimeout("changeImg()", 6000);
 }
 
+
 window.onload = function() {
+    var cursor = $('#cursor');
+
+    $(window).mousemove(function(e) {
+        cursor.css({
+           top: e.clientY - cursor.height() / 1,
+           left: e.clientX - cursor.width() / 1
+        });
+    });
+
+    $(".material-button").mouseenter(function(e) {
+        cursor.addClass("login_cursor");
+        cursor.html("<div class='cursor_text'>LOGIN</div>")  
+    });
+
+    $(".material-button").mouseout(function() {
+            cursor.removeClass("login_cursor");
+            cursor.html("")  
+    });
+
     $("#bubble").click(onBubbleClicked);
     $(".material-button").click(onLoginButtonClicked);
     $(".closeIcon").click(onLoginCloseClicked);
 
-    const cursor = document.getElementById("cursor");
-    document.addEventListener("mousemove", e => {
-        cursor.setAttribute("style", `top: ${e.pageY -10 }px; left: ${e.pageX -10}px;`);
-    });
-
-    $(".material-button").mouseenter(function() {
-        if ($(".material-button:hover").length !== 0) {
-            $("#cursor").addClass("login_cursor");
-        }
-    });
-
-    $(".material-button").mouseout(function() {
-        if ($(".material-button:hover").length === 0) {
-            $("#cursor").removeClass("login_cursor");
-        }
-    });
 
     setTimeout("loading_logo_anim()", 6150);
 

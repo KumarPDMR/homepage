@@ -6,19 +6,30 @@ html {
     width: 10px;
     height: 10px;
     background-color: #e1bee7;
-    position: absolute;
+    position: fixed;
     border-radius: 50%;
+    pointer-events: none;
     z-index: 100;
+    /* mix-blend-mode: difference; */
 }
 
 .login_cursor {
     background-color: #e1bee7 !important;
-    content: "LOGIN";
-    width: 50px !important;
+    transform: scale(7);
+    /* width: 50px !important;
     height: 50px !important;
     background-size: 25px;
     background-position: 13px;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
+    cursor: none;
+
+}
+
+.cursor_text {
+    font-size: 2px;
+    position:absolute;
+    top:40%;
+    left:20%;
 }
 
 body {
@@ -203,6 +214,7 @@ body {
     transform: translate(0%, 0%);
     -webkit-transform: translate(0%, 0%);
     -ms-transform: translate(0%, 0%);
+    cursor: none;
 }
 
 .material-button .shape,
@@ -330,6 +342,7 @@ body {
 .shine {
     /* position: relative; */
     overflow: hidden;
+    cursor: none;
     /* width: 50px; */
     /* height: 50px; */
     /* display: inline-block; */
