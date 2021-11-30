@@ -170,7 +170,6 @@ window.onload = function () {
     });
 
     $(".material-button").mousemove(function (e) {
-        console.log(e.clientX);
         cursor.addClass("login_cursor");
         cursor.html("<div class='cursor_text'>LOGIN</div>");
     })
