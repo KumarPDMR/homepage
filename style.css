@@ -26,16 +26,16 @@ html {
 
 .login_cursor {
     cursor: none !important;
-    width: 200px !important;
-    height: 200px !important;
+    width: 120px !important;
+    height: 120px !important;
     transform: translate(50%, 50%);
 }
 
 .cursor_text {
     font-size: 24px;
     position:absolute;
-    top:40%;
-    left:30%;
+    top:34%;
+    left:20%;
     color:white;
 }
 
@@ -465,6 +465,73 @@ input{
 	transform: scale(.6);
 }
 
+
+
+.picker {
+    display: inline-grid;
+    /* border-radius: 15px; */
+    position: relative;
+    /* border-top: 2rem solid white; */
+    /* border-bottom: 2rem solid white; */
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background: transparent;
+    grid-template-columns: repeat(4, fit-content(500px));
+    font-size: 24px;
+    position: relative;
+    font-feature-settings: "tnum";
+    font-weight: 400;
+    width: 100%;
+  }
+  .picker:before, .picker:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1em;
+    pointer-events: none;
+    backdrop-filter: blur(1px) grayscale(0) opacity(0.8) /* ...and on and on... */;
+  }
+  .picker:before {
+    /* top: -0.2em; */
+    /* background: linear-gradient(white, rgba(255, 255, 255, 0.7)); */
+  }
+  .picker:after {
+    bottom: -0.2em;
+    height: 1em;
+    /* background: linear-gradient(rgba(255, 255, 255, 0.7), white); */
+  }
+  .picker ul {
+    -ms-overflow-style: none;
+    max-height: 4em;
+    overflow-y: scroll;
+    margin-right: 1em;
+    -ms-scroll-snap-type: y mandatory;
+        scroll-snap-type: y mandatory;
+    padding-bottom: 2.5em;
+    margin: 0;
+    padding-top: 1em;
+    margin-left: 50px;
+  }
+  .picker ul::-webkit-scrollbar {
+    display: none;
+  }
+  .picker li {
+      list-style: none;
+    scroll-snap-align: center;
+    /* height: 1.4em; */
+    text-align: right;
+    word-spacing: 0.2em;
+  }
+  
+  
+  
+  .button-container {
+    text-align: center;
+    padding-top: 3rem;
+    width: 100%;
+  }
+  
+  
 
 @keyframes shine {
     10% {
