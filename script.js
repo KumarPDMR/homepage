@@ -103,12 +103,16 @@ function onLoginButtonClicked() {
             $(".overbox").css({
                 "overflow": "hidden"
             })
-            $(".box").addClass("back");
+            // $(".box").addClass("back");
         }, 200);
+
+
+
 
         $(this).addClass("active").animate({
             "width": "300px",
-            "height": "500px"
+            "height": "500px",
+            "border-radius":"10px"
         });
 
         setTimeout(function() {
@@ -125,8 +129,9 @@ function onLoginCloseClicked() {
     $(".box").fadeOut();
     $(".closeIcon").fadeOut();
     $(".material-button").animate({
-        "width": "140px",
-        "height": "140px"
+        "width": "100px",
+        "height": "100px",
+        "border-radius":"50%"
     });
     stopChangeImg = false;
     i = 1;

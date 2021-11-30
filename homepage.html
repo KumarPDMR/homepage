@@ -50,25 +50,27 @@
             <!-- <button id=loginBtn class="shine rounded-circle d-flex justify-content-center align-items-center text-white" style="width: 100px;height: 100px;background-color: #1E88E5;border: 0;z-index:11;font-size: 24px;text-transform: uppercase;"> login </button> -->
             <div class="box">
 
-                <div class="closeIcon"><i class="fas fa-times"></i></div>
-
-                <div class="title">LOGIN</div>
-
-                <div class="input">
-                    <label for="name">Username</label>
-                    <input type="text" name="name" id="name">
-                    <span class="spin"></span>
-                </div>
-
-                <div class="input">
-                    <label for="pass">Password</label>
-                    <input type="password" name="pass" id="pass">
-                    <span class="spin"></span>
-                </div>
-
-                <div class="button login">
-                    <button><span>GO</span> <i class="fa fa-check"></i></button>
-                </div>
+                    <input type="checkbox" id="chk" aria-hidden="true">
+            
+                        <div class="signup">
+                            <form>
+                                <label for="chk" aria-hidden="true">BOOKS</label>
+                                <input type="text" name="txt" placeholder="User name" required="">
+                                <input type="email" name="email" placeholder="Email" required="">
+                                <button class="form-btn">LOGIN</button>
+                            </form>
+                        </div>
+            
+                        <div class="login">
+                            <form>
+                                <label for="chk" aria-hidden="true">JOURNALS</label>
+                                <input type="email" name="email" placeholder="Email" required="">
+                                <input type="password" name="pswd" placeholder="Password" required="">
+                                <button class="form-btn">Login</button>
+                            </form>
+                        </div>
+            
+               
 
                 <a href="" class="pass-forgot">Forgot your password?</a>
 
