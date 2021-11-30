@@ -39,13 +39,17 @@ function changeImg() {
 
 function loading_logo_anim() {
     $("#loading_logo").css("animation", 'none');
+    $("#loading_logo").attr("src","COPS-LOG_Anim_1.gif");
+
+    setTimeout(()=> {
     $("#loading_logo").css("animation", 'fade 3s forwards');
+    },6000);
 
     setTimeout(() => {
         $("#loading_logo_container").css('background', 'transparent');
         $("#loading_logo_container").removeClass('d-flex');
         $("#loading_logo_container").fadeOut();
-    }, 2000);
+    }, 7000);
 
     setTimeout(function() {
         $("#bubble").css("animation", 'none');
@@ -58,7 +62,7 @@ function loading_logo_anim() {
         $("#main_container").attr("style", "");
     }, 2000);
 
-    setTimeout("changeImg()", 6000);
+    setTimeout("changeImg()", 7000);
 }
 
 function makeNewPosition() {
@@ -98,6 +102,8 @@ function onLoginButtonClicked() {
         $(".image_slide" + j).css("z-index", '');
     }
 
+    $(".image_slide1>div>img").attr("src","COPS-LOGO.png");
+
     if ($(this).hasClass('material-button')) {
         setTimeout(function() {
             $(".overbox").css({
@@ -135,6 +141,7 @@ function onLoginCloseClicked() {
     });
     stopChangeImg = false;
     i = 1;
+    $(".image_slide1>div>img").attr("src","COPS-LOG_Anim_1.gif");
     setTimeout("changeImg()", 6000);
 }
 
@@ -163,8 +170,10 @@ window.onload = function() {
     $(".material-button").click(onLoginButtonClicked);
     $(".closeIcon").click(onLoginCloseClicked);
 
+    
+    $("#loading_logo").attr("src","COPS-LOGO.png");
 
-    setTimeout("loading_logo_anim()", 6150);
+    setTimeout("loading_logo_anim()", 2000);
 
     for (let j = 1; j <= 3; j++) {
         $(".image_slide" + j).css("animation", 'none');
