@@ -29,6 +29,7 @@ html {
     width: 120px !important;
     height: 120px !important;
     transform: translate(50%, 50%);
+    background: #a5d6a7 !important;
 }
 
 .cursor_text {
@@ -487,7 +488,7 @@ input{
     content: "";
     position: absolute;
     width: 100%;
-    height: 1em;
+    height: 1.5em;
     pointer-events: none;
     backdrop-filter: blur(1px) grayscale(0) opacity(0.8) /* ...and on and on... */;
   }
@@ -497,12 +498,14 @@ input{
   }
   .picker:after {
     bottom: -0.2em;
-    height: 1em;
+    height: 1.5em;
     /* background: linear-gradient(rgba(255, 255, 255, 0.7), white); */
   }
   .picker ul {
+      color: white;
     -ms-overflow-style: none;
     max-height: 4em;
+    width: 100%;
     overflow-y: scroll;
     margin-right: 1em;
     -ms-scroll-snap-type: y mandatory;
@@ -510,7 +513,7 @@ input{
     padding-bottom: 2.5em;
     margin: 0;
     padding-top: 1em;
-    margin-left: 50px;
+    margin-left: 30px;
   }
   .picker ul::-webkit-scrollbar {
     display: none;
@@ -519,11 +522,21 @@ input{
       list-style: none;
     scroll-snap-align: center;
     /* height: 1.4em; */
-    text-align: right;
     word-spacing: 0.2em;
   }
   
   
+.picker-window {
+    position: absolute;
+    border-top: 1px solid #d4d9d9;
+    border-bottom: 1px solid #d4d9d9;
+    height: 1.4em;
+    left: 0;
+    top: 50%;
+    transform: translateY(-65%);
+    width: 100%;
+    pointer-events: none;
+  }
   
   .button-container {
     text-align: center;
