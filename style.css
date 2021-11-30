@@ -194,6 +194,7 @@ body {
     width: 140px;
     height: 140px;
     border-radius: 50%;
+    border: 0;
     background: #0288d1;
     position: absolute;
     top: 37%;

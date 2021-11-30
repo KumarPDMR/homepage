@@ -9,12 +9,14 @@ function changeImg() {
 
     for (let j = 1; j <= 3; j++) {
         $(".image_slide" + j).css("animation", 'none');
-        if (j === i) continue;
+        if (j === i) {
+            $(".image_slide" + j).css("z-index", '1');
+            continue;
+        }
         $(".image_slide" + j).css("z-index", '-3');
     }
 
     let currentIndex = i;
-        $(".image_slide" + currentIndex).css("z-index", '1');
 
     setTimeout(function() {
         $(".image_slide" + currentIndex).css("animation", 'slideDown 2s');
@@ -30,7 +32,6 @@ function changeImg() {
         $(".image_slide" + i).css("animation", 'slide 2s');
         $(".image_slide" + i).css("z-index", '2');
     }, 0);
-
 
     setTimeout("changeImg()", 7000);
 }
@@ -89,6 +90,7 @@ function onBubbleClicked() {
 }
 
 function onLoginButtonClicked() {
+    console.log("clicked");
     stopChangeImg = true;
     $(".image_slide" + 1).css("z-index", '1');
     for (let j = 2; j <= 3; j++) {
@@ -110,14 +112,17 @@ function onLoginButtonClicked() {
 
         setTimeout(function() {
             $(".box").fadeIn(300);
+            $(".closeIcon").fadeIn(300);
             $(".material-button").fadeOut();
         }, 700)
     }
 }
 
 function onLoginCloseClicked() {
+    console.log("close clicked");
     $(".material-button").fadeIn();
     $(".box").fadeOut();
+    $(".closeIcon").fadeOut();
     $(".material-button").animate({
         "width": "140px",
         "height": "140px"
