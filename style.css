@@ -512,7 +512,7 @@ input{
         scroll-snap-type: y mandatory;
     padding-bottom: 2.5em;
     margin: 0;
-    padding-top: 1em;
+    padding-top: 1.3em;
     margin-left: 30px;
   }
   .picker ul::-webkit-scrollbar {
@@ -532,7 +532,7 @@ input{
     border-bottom: 1px solid #d4d9d9;
     height: 1.4em;
     left: 0;
-    top: 50%;
+    top: 54%;
     transform: translateY(-65%);
     width: 100%;
     pointer-events: none;
