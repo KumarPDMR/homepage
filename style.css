@@ -48,11 +48,18 @@ body {
     border-radius: 20px;
 }
 
+.image_slide_container {
+    width: 300px;
+    height: 500px;
+    top: 10%;
+    left: 12%;
+    position: absolute;
+    overflow: hidden;
+}
+
 .image_slide1,
 .image_slide2,
 .image_slide3 {
-    top: 10%;
-    left: 12%;
     animation: slide 2s;
     animation-fill-mode: forwards;
     border-radius: 20px;
@@ -431,19 +438,19 @@ body {
         top: -100%;
     }
     80% {
-        top: 10%;
+        top: 0%;
     }
     85% {
-        top: 12%;
+        /* top: 12%; */
     }
     90% {
-        top: 10%;
+        top: 0%;
     }
     95% {
-        top: 11%;
+        /* top: 11%; */
     }
     100% {
-        top: 10%;
+        top: 0%;
     }
 }
 
