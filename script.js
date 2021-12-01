@@ -1,11 +1,11 @@
 var i = 1;
 var stopChangeImg = false;
 var stopBubble = false;
+var changeImgTimeout = null;
 var changeImgTimeout1 = null;
+var slideDownTimeout = null;
 
 function changeImg() {
-    let timeout = null;
-
     if (stopChangeImg) {
         return;
     }
@@ -16,11 +16,9 @@ function changeImg() {
         clearTimeout(changeImgTimeout1);
     }
 
-
     $(".image_slide" + i).css("z-index", '1');
 
     for (let j = 1; j <= 3; j++) { 
-        // $(".image_slide" + j).css("animation", 'none');
         if (j === i) {
             continue;
         }
@@ -28,8 +26,7 @@ function changeImg() {
         $(".image_slide" + j).css("z-index", '-3');
     }
 
-
-    timeout = setTimeout(function () {
+    slideDownTimeout = setTimeout(function () {
         $(".image_slide" + currentIndex).css("animation", 'slideDown 2s');
     }, 200);
 
@@ -47,13 +44,13 @@ function changeImg() {
     $(".image_slide" + i).css("animation", 'slide 2s');
     $(".image_slide" + i).css("z-index", '2');
 
-    changeImgTimeout1 = setTimeout("changeImg()", 7000);
+    changeImgTimeout1 = setTimeout("changeImg()", 6500);
 }
 
 function loading_logo_anim() {
     $("#loading_logo").css("animation", 'none');
     $("#loading_logo").attr("src", "COPS-LOG_Anim_1.gif");
-        $("#logo_text").fadeIn();
+    $("#logo_text").fadeIn();
 
     setTimeout(() => {
         $("#loading_logo").attr("src", "COPS-LOGO.png");
@@ -71,19 +68,19 @@ function loading_logo_anim() {
         $(".image_slide1>div>img").attr("src", "COPS-LOG_Anim_1.gif");
     }, 9000);
 
-    setTimeout(function () {
-        $("#bubble").css("animation", 'none');
-        $("#bubble").css("animation", 'createBubble 2s cubic-bezier(0.16,0.87,0.48,0.99) forwards');
-    }, 1000);
+    // setTimeout(function () {
+    //     $("#bubble").css("animation", 'none');
+    //     $("#bubble").css("animation", 'createBubble 2s cubic-bezier(0.16,0.87,0.48,0.99) forwards');
+    // }, 1000);
 
-    setTimeout("animateDiv('.bubble');", 2000);
+    // setTimeout("animateDiv('.bubble');", 2000);
 
     setTimeout(function () {
         $("#main_container").attr("style", "");
     }, 2000);
 
     $(".image_slide1>div>img").attr("src", "COPS-LOGO.png");
-    setTimeout("changeImg()", 16000);
+    setTimeout("changeImg()", 15000);
 }
 
 function makeNewPosition() { 
@@ -129,7 +126,6 @@ function onBubbleClicked() {
 }
 
 function onLoginButtonClicked() {
-    console.log("clicked");
     stopChangeImg = true;
 
     $(".image_slide" + 1).css("z-index", '2');
@@ -142,9 +138,10 @@ function onLoginButtonClicked() {
     if ($(this).hasClass('material-button')) {
         setTimeout(function () {
             $(".overbox").css({"overflow": "hidden"})
-            // $(".box").addClass("back");
         }, 200);
 
+        $(this).css("background-color","#0288d1");
+        $(".material-button>img").hide();
 
         $(this).addClass("active").animate({"width": "300px", "height": "500px", "border-radius": "10px"});
 
@@ -156,21 +153,27 @@ function onLoginButtonClicked() {
     }
 }
 
-var changeImgTimeout = null;
+
 function onLoginCloseClicked() {
+    $(".material-button>img").show();
     $(".material-button").fadeIn();
     $(".box").fadeOut();
     $(".closeIcon").fadeOut();
-    $(".material-button").animate({"width": "100px", "height": "100px", "border-radius": "50%"});
+    $(".material-button").css("background-color","transparent");
+    $(".material-button").animate({"width": "64px", "height": "64px", "border-radius": "50%"});
     stopChangeImg = false;
     i = 1;
+    $(".image_slide1").css("z-index", '2');
+    $(".image_slide2").css("z-index", '1');
+    $(".image_slide3").css("z-index", '-3');
+    
     $(".image_slide1>div>img").attr("src", "COPS-LOGO.png");
     $(".image_slide1>div>img").attr("src", "COPS-LOG_Anim_1.gif");
-    if (changeImgTimeout != null) {
+    if (changeImgTimeout !== null) {
         clearTimeout(changeImgTimeout);
         changeImgTimeout = null;
     }
-    setTimeout("changeImg()", 7000);
+   changeImgTimeout =  setTimeout("changeImg()", 6000);
 }
 
 window.onload = function () {
