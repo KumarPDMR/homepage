@@ -62,7 +62,8 @@ function loading_logo_anim() {
     setTimeout(() => {
         $("#loading_logo_container").css('background', 'transparent');
         $(".image_slide1>div>img").attr("src", "COPS-LOG_Anim_1.gif");
-    }, 7000);
+        $("#loading_logo").fadeOut();
+    }, 8000);
 
     setTimeout(function () {
         $("#bubble").css("animation", 'none');
@@ -76,7 +77,7 @@ function loading_logo_anim() {
     }, 2000);
 
     $(".image_slide1>div>img").attr("src", "COPS-LOGO.png");
-    setTimeout("changeImg()", 15000);
+    setTimeout("changeImg()", 16000);
 }
 
 function makeNewPosition() { 

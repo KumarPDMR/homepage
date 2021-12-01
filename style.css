@@ -568,7 +568,6 @@ input{
         opacity: 1;
         left: 50%;
         top:33%;
-        transform: scale(0.9);
     }
     60% {
         opacity: 0.7;
@@ -582,7 +581,7 @@ input{
         top:33%
     }
     100% {
-        opacity: 0;
+        /* opacity: 0; */
     }
 }
 
