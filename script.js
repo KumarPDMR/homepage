@@ -160,12 +160,14 @@ function onLoginButtonClicked() {
 
 
 function onLoginCloseClicked() {
-    $(".material-button>img").show();
     $(".material-button").fadeIn();
     $(".box").fadeOut();
     $(".closeIcon").fadeOut();
-    $(".material-button").css("background-color","transparent");
     $(".material-button").animate({"width": "42px", "height": "42px", "border-radius": "50%"});
+    setTimeout(() => {
+        $(".material-button>img").show();
+        $(".material-button").css("background-color","transparent");    
+    }, 1000)
     stopChangeImg = false;
     i = 1;
     $(".image_slide1").css("z-index", '2');
