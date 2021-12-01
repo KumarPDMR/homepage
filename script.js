@@ -1,42 +1,32 @@
 var i = 1;
 var stopChangeImg = false;
 var stopBubble = false;
+var changeImgTimeout1 = null;
 
 function changeImg() {
-    let timeout = null, timeout1 = null;
+    let timeout = null,
+        timeout1 = null;
 
     if (stopChangeImg) {
-
-        if (timeout !== null) {
-            clearTimeout(timeout);
-        }
-
-        if (timeout1 !== null) {
-            clearTimeout(timeout1);
-        }
-
         return;
     }
 
+    let currentIndex = i;
+
+    if (changeImgTimeout1 !== null) {
+        clearTimeout(changeImgTimeout1);
+    }
+
+
     $(".image_slide" + i).css("z-index", '1');
 
-    for (let j = 1; j <= 3; j++) {
-        // $(".image_slide" + j).css("animation", 'none');
+    for (let j = 1; j <= 3; j++) { // $(".image_slide" + j).css("animation", 'none');
         if (j === i) {
             continue;
         }
         $(".image_slide" + j).css("z-index", '-3');
     }
 
-    let currentIndex = i;
-
-    if (timeout !== null) {
-        clearTimeout(timeout);
-    }
-
-    if (timeout1 !== null) {
-        clearTimeout(timeout1);
-    }
 
     timeout = setTimeout(function () {
         $(".image_slide" + currentIndex).css("animation", 'slideDown 2s');
@@ -61,7 +51,7 @@ function changeImg() {
     //     $(".image_slide" + i).css("z-index", '2');
     // }, 0);
 
-    setTimeout("changeImg()", 7000);
+    changeImgTimeout1 = setTimeout("changeImg()", 7000);
 }
 
 function loading_logo_anim() {
@@ -69,7 +59,7 @@ function loading_logo_anim() {
     $("#loading_logo").attr("src", "COPS-LOG_Anim_1.gif");
 
     setTimeout(() => {
-        $("#loading_logo").attr("src","COPS-LOGO.png");
+        $("#loading_logo").attr("src", "COPS-LOGO.png");
         $("#loading_logo").css("animation", 'fade 3s forwards');
     }, 6000);
 
@@ -132,7 +122,7 @@ function onBubbleClicked() {
     }, 3000);
 
     stopBubble = true;
-    
+
 }
 
 function onLoginButtonClicked() {
@@ -176,7 +166,7 @@ function onLoginCloseClicked() {
     if (changeImgTimeout != null) {
         clearTimeout(changeImgTimeout);
         changeImgTimeout = null;
-    } 
+    }
     setTimeout("changeImg()", 7000);
 }
 
@@ -186,7 +176,10 @@ window.onload = function () {
     var isCursorOnMaterial = false;
 
     $(window).mousemove(function (e) {
-        if (isCursorOnMaterial) return;
+        if (isCursorOnMaterial) 
+            return;
+        
+
         cursor.css({
             top: e.clientY - cursor.height() / 2,
             left: e.clientX - cursor.width() / 2
