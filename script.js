@@ -50,9 +50,14 @@ function changeImg() {
 function loading_logo_anim() {
     $("#loading_logo").css("animation", 'none');
     $("#loading_logo").attr("src", "COPS-LOG_Anim_1.gif");
+    $("#loading_logo").removeAttr("style");
+    $("#loading_logo").css("z-index", "10");
+    $("#loading_logo").css("background-color", "transparent")
     $("#logo_text").fadeIn();
 
+
     setTimeout(() => {
+        $("#loading_logo").css({"width":"200px", "height":"200px","z-index": "10","background-color": "transparent"})
         $("#loading_logo").attr("src", "COPS-LOGO.png");
         $("#loading_logo").css("animation", 'fade 3s forwards');
         $("#logo_text").fadeOut();
@@ -176,6 +181,7 @@ function onLoginCloseClicked() {
    changeImgTimeout =  setTimeout("changeImg()", 6000);
 }
 
+
 window.onload = function () {
     var cursor = $('#cursor');
     var isCursorOnMaterial = false;
@@ -198,11 +204,11 @@ window.onload = function () {
 
     $(".material-button").mousemove(function (e) {
         isCursorOnMaterial = true;
+        cursor.addClass("login_cursor");
         cursor.css({
             top: e.clientY - cursor.height() / 1,
             left: e.clientX - cursor.width() / 1
         });
-        cursor.addClass("login_cursor");
         cursor.html("<div class='cursor_text'>LOGIN</div>");
     })
 
@@ -211,9 +217,11 @@ window.onload = function () {
     $(".closeIcon").click(onLoginCloseClicked);
 
     $("#loading_logo").attr("src", "COPS-LOGO.png");
+    $("#loading_logo").css({"width":"200px", "height":"200px","z-index": "10","background-color": "transparent"})
     setTimeout("loading_logo_anim()", 2000);
 
     for (let j = 1; j <= 3; j++) {
         $(".image_slide" + j).css("animation", 'none');
     }
 }
+

@@ -475,7 +475,7 @@ input{
     position: relative;
     /* border-top: 2rem solid white; */
     /* border-bottom: 2rem solid white; */
-    padding-left: 1rem;
+    padding-left: 1.5rem;
     padding-right: 1rem;
     background: transparent;
     grid-template-columns: repeat(4, fit-content(500px));
@@ -484,6 +484,7 @@ input{
     font-feature-settings: "tnum";
     font-weight: 400;
     width: 100%;
+    margin-top: 35px;
   }
   .picker:before, .picker:after {
     content: "";
