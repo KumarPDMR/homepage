@@ -53,6 +53,7 @@ function changeImg() {
 function loading_logo_anim() {
     $("#loading_logo").css("animation", 'none');
     $("#loading_logo").attr("src", "COPS-LOG_Anim_1.gif");
+        $("#logo_text").fadeIn();
 
     setTimeout(() => {
         $("#loading_logo").attr("src", "COPS-LOGO.png");
