@@ -4,8 +4,7 @@ var stopBubble = false;
 var changeImgTimeout1 = null;
 
 function changeImg() {
-    let timeout = null,
-        timeout1 = null;
+    let timeout = null;
 
     if (stopChangeImg) {
         return;
@@ -20,10 +19,12 @@ function changeImg() {
 
     $(".image_slide" + i).css("z-index", '1');
 
-    for (let j = 1; j <= 3; j++) { // $(".image_slide" + j).css("animation", 'none');
+    for (let j = 1; j <= 3; j++) { 
+        // $(".image_slide" + j).css("animation", 'none');
         if (j === i) {
             continue;
         }
+
         $(".image_slide" + j).css("z-index", '-3');
     }
 
@@ -46,11 +47,6 @@ function changeImg() {
     $(".image_slide" + i).css("animation", 'slide 2s');
     $(".image_slide" + i).css("z-index", '2');
 
-    // timeout1 = setTimeout(function () {
-    //     $(".image_slide" + i).css("animation", 'slide 2s');
-    //     $(".image_slide" + i).css("z-index", '2');
-    // }, 0);
-
     changeImgTimeout1 = setTimeout("changeImg()", 7000);
 }
 
@@ -65,7 +61,6 @@ function loading_logo_anim() {
 
     setTimeout(() => {
         $("#loading_logo_container").css('background', 'transparent');
-        $("#loading_logo_container").fadeOut();
         $(".image_slide1>div>img").attr("src", "COPS-LOG_Anim_1.gif");
     }, 7000);
 
@@ -81,10 +76,11 @@ function loading_logo_anim() {
     }, 2000);
 
     $(".image_slide1>div>img").attr("src", "COPS-LOGO.png");
-    setTimeout("changeImg()", 13000);
+    setTimeout("changeImg()", 15000);
 }
 
-function makeNewPosition() { // Get viewport dimensions (remove the dimension of the div)
+function makeNewPosition() { 
+    // Get viewport dimensions (remove the dimension of the div)
     var h = $(window).height() - 50;
     var w = $(window).width() - 50;
 
@@ -172,24 +168,17 @@ function onLoginCloseClicked() {
 
 window.onload = function () {
     var cursor = $('#cursor');
-
     var isCursorOnMaterial = false;
 
     $(window).mousemove(function (e) {
         if (isCursorOnMaterial) 
             return;
         
-
         cursor.css({
             top: e.clientY - cursor.height() / 2,
             left: e.clientX - cursor.width() / 2
         });
     });
-
-    // $(".material-button").mouseenter(function (e) {
-    //     cursor.addClass("login_cursor");
-    //     cursor.html("<div class='cursor_text'>LOGIN</div>")
-    // });
 
     $(".material-button").mouseout(function () {
         isCursorOnMaterial = false;
@@ -211,13 +200,10 @@ window.onload = function () {
     $(".material-button").click(onLoginButtonClicked);
     $(".closeIcon").click(onLoginCloseClicked);
 
-
     $("#loading_logo").attr("src", "COPS-LOGO.png");
-
     setTimeout("loading_logo_anim()", 2000);
 
     for (let j = 1; j <= 3; j++) {
         $(".image_slide" + j).css("animation", 'none');
     }
-
 }
