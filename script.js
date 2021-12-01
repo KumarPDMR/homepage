@@ -61,9 +61,9 @@ function loading_logo_anim() {
 
     setTimeout(() => {
         $("#loading_logo_container").css('background', 'transparent');
-        $(".image_slide1>div>img").attr("src", "COPS-LOG_Anim_1.gif");
         $("#loading_logo").fadeOut();
-    }, 8000);
+        $(".image_slide1>div>img").attr("src", "COPS-LOG_Anim_1.gif");
+    }, 8500);
 
     setTimeout(function () {
         $("#bubble").css("animation", 'none');

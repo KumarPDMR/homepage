@@ -576,12 +576,10 @@ input{
         left: 15%;
         top:33%
     }
-    99% {
-        left: 15%;
-        top:33%
-    }
+  
     100% {
-        /* opacity: 0; */
+        left: 15%;
+        top:33%    
     }
 }
 
