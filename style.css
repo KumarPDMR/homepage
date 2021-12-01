@@ -515,7 +515,7 @@ input{
     padding-bottom: 2.5em;
     margin: 0;
     padding-top: 1.3em;
-    margin-left: 30px;
+    margin-left: 15px;
   }
   .picker ul::-webkit-scrollbar {
     display: none;
@@ -525,6 +525,8 @@ input{
     scroll-snap-align: center;
     /* height: 1.4em; */
     word-spacing: 0.2em;
+    display:table;
+    margin:0px auto 0px auto;
   }
   
   
