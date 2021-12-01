@@ -165,7 +165,7 @@ function onLoginCloseClicked() {
     $(".box").fadeOut();
     $(".closeIcon").fadeOut();
     $(".material-button").css("background-color","transparent");
-    $(".material-button").animate({"width": "64px", "height": "64px", "border-radius": "50%"});
+    $(".material-button").animate({"width": "42px", "height": "42px", "border-radius": "50%"});
     stopChangeImg = false;
     i = 1;
     $(".image_slide1").css("z-index", '2');
