@@ -57,6 +57,7 @@ function loading_logo_anim() {
     setTimeout(() => {
         $("#loading_logo").attr("src", "COPS-LOGO.png");
         $("#loading_logo").css("animation", 'fade 3s forwards');
+        $("#logo_text").fadeOut();
     }, 6000);
 
     setTimeout(() => {
