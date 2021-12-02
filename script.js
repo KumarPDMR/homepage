@@ -35,6 +35,48 @@ $(document).ready(() => {
         cursor.html("<div class='cursor_text'>LOGIN</div>");
     });
 
+    $('.my-slider').slick({
+        arrows: false,
+        focusOnSelect:true,
+        vertical:true,
+        verticalSwiping:true,
+        rows:3,
+        swipeToSlide:true,
+        Infinite: true,
+        slidesToScroll: 1,
+        focusOnSelect:true
+      });
+    
+      var scrollCount = null;
+var scroll= null;
+
+
+      $(".my-slider").on('wheel', (function(e) {
+        e.preventDefault();
+
+        clearTimeout(scroll);
+        scroll = setTimeout(function(){scrollCount=0;}, 200);
+        if(scrollCount) return 0;
+        scrollCount=1;
+    
+        if (e.originalEvent.deltaY < 0) {
+            $(this).slick('slickNext');
+        } else {
+            $(this).slick('slickPrev');
+        }
+    
+      }));
+      
+     // On before slide change
+$('.my-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
+    console.log(currentSlide);
+    console.log($('.slick-slide.slick-current.slick-active').text());
+
+
+  });
+  
+      
+
     $(".material-button").click(onLoginButtonClicked);
     $(".closeIcon").click(onLoginCloseClicked);
 
@@ -146,7 +188,8 @@ function onLoginButtonClicked() {
         // $(this).addClass("active").animate({"width": "300px", "height": "500px", "border-radius": "10px"});
 
         setTimeout(function () {
-            $(".box").fadeIn(300);
+            $(".box").attr("style","")
+            // $(".box").fadeIn(300);
             $(".closeIcon").fadeIn(300);
             $(".material-button").fadeOut();
         }, 2000);
@@ -177,3 +220,11 @@ function onLoginCloseClicked() {
     }
    changeImgTimeout =  setTimeout("changeImg()", 6000);
 }
+
+
+$("#scroll-content").scroll( function (event) {
+    var newDiv = document.createElement("div");
+       newDiv.innerHTML = "books";
+       document.getElementById("scroll-content").appendChild(newDiv);
+});
+
