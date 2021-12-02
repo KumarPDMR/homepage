@@ -57,6 +57,22 @@ $(document).ready(() => {
         cursor.html("<div class='cursor_text'>LOGIN</div>");
     });
 
+    $(".closeIcon").mousemove(function (e) {
+        isCursorOnMaterial = true;
+        cursor.addClass("login_cursor");
+        cursor.css({
+            top: e.clientY - cursor.height() / 1,
+            left: e.clientX - cursor.width() / 1
+        });
+        cursor.html("<div class='cursor_text'>CLOSE</div>");
+    });
+
+    $(".closeIcon").mouseout(function () {
+        isCursorOnMaterial = false;
+        cursor.removeClass("login_cursor");
+        cursor.html("")
+    });
+
   
     var scrollCount = null;
     var scroll= null;
