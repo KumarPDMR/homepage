@@ -16,6 +16,7 @@ $(document).ready(() => {
         slidesToScroll: 1,
         focusOnSelect:true,
         centerMode:true,
+        rows:1
       });
     
     var cursor = $('#cursor');

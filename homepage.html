@@ -7,19 +7,21 @@
         <title>Document</title>
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-<!-- Add the slick-theme.css if you want default styling -->
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-<!-- Add the slick-theme.css if you want default styling -->
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+        <link
+        rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <!-- Add the slick-theme.css if you want default styling -->
+        <link
+        rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <!-- Add the slick-theme.css if you want default styling -->
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 
         <link rel="stylesheet" href="style.css">
     </head>
     <body style="height: 100vh;">
         <div id="cursor"></div>
-         <div id="loading_logo_container" class="w-100 h-100 d-flex justify-content-center align-items-center" style="background-color: #CFD8DC;z-index: 25;">
-                    <img src="./COPS-LOG_Anim_1.gif" id="loading_logo"/>
-                </div> 
+        <div id="loading_logo_container" class="w-100 h-100 d-flex justify-content-center align-items-center" style="background-color: #CFD8DC;z-index: 25;">
+            <img src="./COPS-LOG_Anim_1.gif" id="loading_logo"/>
+        </div>
 
         <div id="main_container" style="" class="w-100 h-100 d-flex flex-row">
             <div>
@@ -60,41 +62,46 @@
 
             </div>
             <div class="w-50 h-100" style="background-color: transparent;">
-                 <div class="d-flex justify-content-center align-items-center w-100 h-100">
+                <div class="d-flex justify-content-center align-items-center w-100 h-100">
                     <div class=" d-flex justify-content-center align-items-center flex-column ">
 
                         <button class="material-button alt-2 ">
                             <img style="width: 100%;height: 100%;" src="./lcon_32.png" alt="user">
                         </button>
-              
-            <div class="box" style="">
-                <div class="" style="height: 70px;width: 300px;">
-                    <div class="my-slider" style="">
-                        <div id="Journals" style="color: rgba(255,255,255,0.5);text-align: center; width: 300px;height: 30px;">Journals</div>
-                        <div id="Books" style="color: rgba(255,255,255,0.5);text-align: center;width: 300px;height:30px;">Books</div>
-                        <div id="Journals1" style="color: rgba(255,255,255,0.5);text-align: center;width: 300px;height: 30px;">Journals</div>
-                        <div id="Books1" style="color: rgba(255,255,255,0.5);text-align: center;width: 300px;height: 30px;">Books</div>
+
+                        <div class="box" style="">
+                            <div class="" style="position: relative;">
+                               <div style="width: 300px;height: 120px;">
+                                <div class="my-slider" style="">
+                                    <div id="Journals" style="color: rgba(255,255,255,0.5);text-align: center; width: 300px;height: 30px;">Journals</div>
+                                    <div id="Books" style="color: rgba(255,255,255,0.5);text-align: center;width: 300px;height:30px;">Books</div>
+                                    <div id="Journals1" style="color: rgba(255,255,255,0.5);text-align: center;width: 300px;height: 30px;">Journals</div>
+                                    <div id="Books1" style="color: rgba(255,255,255,0.5);text-align: center;width: 300px;height: 30px;">Books</div>
+                                </div>
+                               </div>
+
+
+                                <button class="closeIcon" style="border:0;"><i class="fas fa-times"></i></button>
+
+                                <p class="login_border">&#x00A0;</p>
+                                <form id="login_form" name="login_form" action="#" method="post" style="text-align:center;">
+                                    <input type="text" class="login_inputs" style='background-color:#f5f5f0;' placeholder="Username" name="user_name" id="user_name" autofocus/><br/>
+                                    <input type="password" class="login_inputs" style='background-color:#f5f5f0;' name="emp_pass" placeholder="Password" id="emp_pass"><br/>
+                                    <input type="submit" id="login_forma" value="LOGIN" name="login" style='color:white;background-color:#0146EC !important;margin:1em 0em 0.5em 0em;padding: 2px 15px;border-radius: 0px;font-size:13px;'>
+                                    <p class="forget_pwd">
+                                        <a href="https://pdmrindia.co.in/developer/acmbooks/index.php/home/forgot_password">Forgot password?</a>
+                                    </p>
+
+                                </form>
+                            </div>
+
+
+                        </div>
+
                     </div>
-
-                    <p class="login_border">&#x00A0;</p>
-                    <form id="login_form" name="login_form" action="#" method="post" style="text-align:center;">
-                        <input type="text" class="login_inputs" style='background-color:#f5f5f0;' placeholder="Username" name="user_name" id="user_name" autofocus/><br/>
-                        <input type="password" class="login_inputs" style='background-color:#f5f5f0;' name="emp_pass" placeholder="Password" id="emp_pass"><br/>
-                        <input type="submit" id="login_forma" value="LOGIN" name="login" style='color:white;background-color:#0146EC !important;margin:1em 0em 0.5em 0em;padding: 2px 15px;border-radius: 0px;font-size:13px;'>
-                        <p class="forget_pwd">
-                            <a href="https://pdmrindia.co.in/developer/acmbooks/index.php/home/forgot_password">Forgot password?</a>
-                        </p>
-
-                    </form>
-                 </div>
-
-                 
-            </div>
-
-                </div>
                 </div>
 
- 
+
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
