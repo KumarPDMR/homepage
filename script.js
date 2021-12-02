@@ -38,10 +38,12 @@ $(document).ready(() => {
     $(".material-button").click(onLoginButtonClicked);
     $(".closeIcon").click(onLoginCloseClicked);
 
-    $("#loading_logo").attr("src","./COPS-LOGO.png");
-    // setTimeout("loadLogoAnim()", 2000);
+    $(".image_slide1>div>img").attr("src", "COPS-LOGO.png");
+    $(".image_slide1>div>img").css({"width":"200px","height":"200px"});
 
-    setTimeout("changeImg()", 6000);
+    $("#loading_logo").attr("src","./COPS-LOGO.png");
+    setTimeout("loadLogoAnim()", 2000);
+
 })
 
 function loadLogoAnim() {
@@ -58,13 +60,23 @@ function loadLogoAnim() {
         $("#loading_logo").css("animation", 'fade 3s forwards');
     }, 6000);
 
+
     setTimeout(() => {
         $("#loading_logo_container").css('background', 'transparent');
         $("#loading_logo").fadeOut(200);
         $("#loading_logo_container").fadeOut();
         $("#loading_logo_container").addClass("hide-important");
+        $(".image_slide1>div>img").attr("src", "COPS-LOGO.png");
     }, 9000);
 
+    setTimeout(()=> {
+        $(".image_slide1>div>img").attr("src", "COPS-LOG_Anim_1.gif");
+    },10000)
+
+
+    setTimeout(()=>{
+        changeImg();
+    }, 16000);
 }
 
 function changeImg() {
@@ -98,10 +110,12 @@ function changeImg() {
         i = i + 1;
     }
 
-    // $(".image_slide1>div>img").attr("src", "COPS-LOGO.png");
-    // $(".image_slide1>div>img").attr("src", "COPS-LOG_Anim_1.gif");
-    // $(".image_slide2>img").attr("src", "PDMR-logo-animation.gif_");
-    // $(".image_slide2>img").attr("src", "PDMR-logo-animation.gif");
+    $(".image_slide1>div>img").attr("src", "COPS-LOGO.png");
+    $(".image_slide1>div>img").attr("src", "COPS-LOG_Anim_1.gif");
+    $(".image_slide2>div>img").attr("src", "PDMR-logo-animation.gif_");
+    $(".image_slide2>div>img").attr("src", "PDMR-logo-animation.gif");
+    $(".image_slide3>div>img").attr("src", "Compuscript-logo-animation.gif_");
+    $(".image_slide3>div>img").attr("src", "Compuscript-logo-animation.gif");
 
     $(".image_slide" + i).css("animation", 'slide 2s');
     $(".image_slide" + i).css("z-index", '2');
