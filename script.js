@@ -9,49 +9,49 @@ $(document).ready(() => {
     var cursor = $('#cursor');
     var isCursorOnMaterial = false;
 
-    $(window).mousemove(function (e) {
-        if (isCursorOnMaterial) 
-            return;
+    // $(window).mousemove(function (e) {
+    //     if (isCursorOnMaterial) 
+    //         return;
         
-        cursor.css({
-            top: e.clientY - cursor.height() / 2,
-            left: e.clientX - cursor.width() / 2
-        });
-    });
+    //     cursor.css({
+    //         top: e.clientY - cursor.height() / 2,
+    //         left: e.clientX - cursor.width() / 2
+    //     });
+    // });
 
-    $(".material-button").mouseout(function () {
-        isCursorOnMaterial = false;
-        cursor.removeClass("login_cursor");
-        cursor.html("")
-    });
+    // $(".material-button").mouseout(function () {
+    //     isCursorOnMaterial = false;
+    //     cursor.removeClass("login_cursor");
+    //     cursor.html("")
+    // });
 
-    $(".material-button").mousemove(function (e) {
-        isCursorOnMaterial = true;
-        cursor.addClass("login_cursor");
-        cursor.css({
-            top: e.clientY - cursor.height() / 1,
-            left: e.clientX - cursor.width() / 1
-        });
-        cursor.html("<div class='cursor_text'>LOGIN</div>");
-    });
+    // $(".material-button").mousemove(function (e) {
+    //     isCursorOnMaterial = true;
+    //     cursor.addClass("login_cursor");
+    //     cursor.css({
+    //         top: e.clientY - cursor.height() / 1,
+    //         left: e.clientX - cursor.width() / 1
+    //     });
+    //     cursor.html("<div class='cursor_text'>LOGIN</div>");
+    // });
 
     $('.my-slider').slick({
         arrows: false,
         focusOnSelect:true,
         vertical:true,
         verticalSwiping:true,
-        rows:3,
         swipeToSlide:true,
         Infinite: true,
         slidesToScroll: 1,
-        focusOnSelect:true
+        focusOnSelect:true,
+        centerMode:true,
       });
     
       var scrollCount = null;
         var scroll= null;
 
 
-      $(".my-slider").on('wheel', (function(e) {
+      $(".my-slider").on('wheel', function(e) {
         e.preventDefault();
 
         clearTimeout(scroll);
@@ -64,12 +64,13 @@ $(document).ready(() => {
         } else {
             $(this).slick('slickPrev');
         }
-      }));
+      });
       
      // On before slide change
 $('.my-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
-    $(".slick-slide>div>div").css("color", rgba(255,255,255,0.5));
-    $('.slick-slide.slick-current.slick-active>div>div').css("color","white");
+    console.log($('.slick-slide.slick-current.slick-active>div>div').attr("id"))
+//     $(".slick-slide>div>div").css("color", rgba(255,255,255,0.5));
+    // $('.slick-slide.slick-current.slick-active>div>div').css("color","white");
   });
   
       

@@ -9,7 +9,7 @@
 }
   
 html {
-    cursor: none !important;
+    /* cursor: none !important; */
 }
 
 #cursor {
@@ -214,9 +214,13 @@ input{
 	border-radius: 5px;
 }
 
-.slick-active+div+div {
-    color: red !important;
+ .slick-center {
+    -webkit-transform: scale(1.25);
+    -moz-transform: scale(1.25);
+    transform: scale(1.25);
+    color: white !important;
 }
+
 
 /* animations */
 
