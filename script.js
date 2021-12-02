@@ -133,19 +133,19 @@ function loadLogoAnim() {
 
     setTimeout(()=> {
         $(".bg-2").css("z-index","108");
-    },9200);
+    },9500);
 
     setTimeout(()=> {
         $(".bg-3").css("z-index","107");
-    },9400);
+    },10000);
 
     setTimeout(()=> {
         $(".bg-4").css("z-index","106");
-    },9600);
+    },10500);
 
     setTimeout(()=> {
         $(".bg-5").css("z-index","105");
-    },9800);
+    },11000);
 
     setTimeout(()=> {
         $("#loading_logo_container").css('background', 'transparent');
@@ -154,19 +154,18 @@ function loadLogoAnim() {
         $(".bg-3").css("z-index","");
         $(".bg-4").css("z-index","");
         $(".bg-5").css("z-index","");
-
-    },9900);
+    },11500);
 
     setTimeout(() => {
         $("#loading_logo").fadeOut(200);
         $("#loading_logo_container").fadeOut();
         $("#loading_logo_container").addClass("hide-important");
         $(".image_slide1>div>img").attr("src", "COPS-LOGO.png");
-    }, 10000);
+    }, 11600);
 
     setTimeout(()=> {
         $(".image_slide1>div>img").attr("src", "COPS-LOG_Anim_1.gif");
-    },10000)
+    },11700)
 
 
     setTimeout(()=>{

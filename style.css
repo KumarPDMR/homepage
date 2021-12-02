@@ -9,7 +9,7 @@
 }
   
 html {
-    /* cursor: none !important; */
+    cursor: none !important;
 }
 
 #cursor {
@@ -131,7 +131,7 @@ html {
     width: 300px;
     height: 500px;
     border-radius: 20px;
-    background-color: #CFD8DC;
+    background-color: #CE93D8;
 }
 
 
