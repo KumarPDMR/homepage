@@ -6,6 +6,9 @@ var slideDownTimeout = null;
 
 
 $(document).ready(() => {
+    $(".closeIcon").hide();
+    $(".hide-top").hide();
+
     $('.my-slider').slick({
         arrows: false,
         focusOnSelect:true,
@@ -16,9 +19,15 @@ $(document).ready(() => {
         slidesToScroll: 1,
         focusOnSelect:true,
         centerMode:true,
-        rows:1
+        rows:1,
+        accessibility:true,
+        adaptiveHeight:true,
+        autoplay:true,
+        // slidesToShow:0,
+        draggable:true
       });
     
+
     var cursor = $('#cursor');
     var isCursorOnMaterial = false;
 
@@ -53,6 +62,7 @@ $(document).ready(() => {
     var scroll= null;
 
 
+
     $(".my-slider").on('wheel', function(e) {
     e.preventDefault();
 
@@ -71,6 +81,7 @@ $(document).ready(() => {
     $('.my-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
         console.log($('.slick-slide.slick-current.slick-active>div>div').attr("id"))
     });
+
   
     $(".material-button").click(onLoginButtonClicked);
     $(".closeIcon").click(onLoginCloseClicked);
@@ -101,23 +112,23 @@ function loadLogoAnim() {
 
 
     setTimeout(() => {
-        $(".bg-1").css("z-index","30");
+        $(".bg-1").css("z-index","109");
     },9000)
 
     setTimeout(()=> {
-        $(".bg-2").css("z-index","29");
+        $(".bg-2").css("z-index","108");
     },9200);
 
     setTimeout(()=> {
-        $(".bg-3").css("z-index","28");
+        $(".bg-3").css("z-index","107");
     },9400);
 
     setTimeout(()=> {
-        $(".bg-4").css("z-index","27");
+        $(".bg-4").css("z-index","106");
     },9600);
 
     setTimeout(()=> {
-        $(".bg-5").css("z-index","26");
+        $(".bg-5").css("z-index","105");
     },9800);
 
     setTimeout(()=> {
@@ -217,6 +228,7 @@ function onLoginButtonClicked() {
             $(".box").attr("style","")
             // $(".box").fadeIn(300);
             $(".closeIcon").fadeIn(300);
+            $(".hide-top").show();
             $(".material-button").fadeOut();
         }, 2000);
     }
@@ -227,6 +239,8 @@ function onLoginCloseClicked() {
     $(".material-button").fadeIn();
     $(".box").fadeOut();
     $(".closeIcon").fadeOut();
+    $(".hide-top").hide();
+
     $(".material-button").css({"transform":"scale(1)", "border-radius": "50%"});
     setTimeout(() => {
         $(".material-button>img").show();

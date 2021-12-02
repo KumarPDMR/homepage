@@ -27,7 +27,8 @@ html {
     width: 120px !important;
     height: 120px !important;
     transform: translate(50%, 50%);
-    background: rgb(76, 175, 80) !important;
+    background-color: rgb(255, 167, 38) !important;
+    /* background: rgb(76, 175, 80) !important; */
 }
 
 .cursor_text {
@@ -42,6 +43,7 @@ html {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 104 !important;
 }
 
 #loading_logo {
@@ -172,6 +174,7 @@ html {
     height: 50px;
     border-radius: 50%;
     right: -6.5%;
+    z-index: 102;
 }
 
 .closeIcon>i {
@@ -211,6 +214,18 @@ input{
     color: white !important;
 }
 
+.hide-top {
+    background-color: #0288d1;
+    width: 300px;
+    height: 20px;
+    position: absolute;
+    z-index: 101;
+    top: 0;
+}
+
+.slick-list {
+    height: 80px !important;
+}
 
 /* animations */
 
