@@ -164,6 +164,7 @@ html {
     height: 500px;
     background: #0288d1;
     border-radius: 10px;
+    box-shadow: 0 0 10px;
 }
 
 .closeIcon {
@@ -221,6 +222,7 @@ input{
     position: absolute;
     z-index: 101;
     top: 0;
+    border-radius: 10px;
 }
 
 .slick-list {
