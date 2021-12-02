@@ -214,6 +214,10 @@ input{
 	border-radius: 5px;
 }
 
+.slick-active+div+div {
+    color: red !important;
+}
+
 /* animations */
 
 @keyframes bounceInDown {

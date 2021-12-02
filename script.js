@@ -48,7 +48,7 @@ $(document).ready(() => {
       });
     
       var scrollCount = null;
-var scroll= null;
+        var scroll= null;
 
 
       $(".my-slider").on('wheel', (function(e) {
@@ -64,15 +64,12 @@ var scroll= null;
         } else {
             $(this).slick('slickPrev');
         }
-    
       }));
       
      // On before slide change
 $('.my-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
-    console.log(currentSlide);
-    console.log($('.slick-slide.slick-current.slick-active').text());
-
-
+    $(".slick-slide>div>div").css("color", rgba(255,255,255,0.5));
+    $('.slick-slide.slick-current.slick-active>div>div').css("color","white");
   });
   
       
