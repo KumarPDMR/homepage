@@ -27,7 +27,7 @@ html {
     width: 120px !important;
     height: 120px !important;
     transform: translate(50%, 50%);
-    background: #a5d6a7 !important;
+    background: rgb(76, 175, 80) !important;
 }
 
 .cursor_text {
@@ -129,7 +129,7 @@ html {
     width: 300px;
     height: 500px;
     border-radius: 20px;
-    
+    background-color: #CFD8DC;
 }
 
 
@@ -163,16 +163,6 @@ html {
     background: #0288d1;
     border-radius: 10px;
 }
-
-.s {
-    display: none;
-    width: 300px;
-    height: 500px;
-    background: #0288d1;
-    border-radius: 10px;
-    
-}
-
 
 .closeIcon {
     position: absolute;

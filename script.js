@@ -49,43 +49,29 @@ $(document).ready(() => {
     });
 
   
-       // On before slide change
-$('.my-slider').on('init', function(slick){
-    console.log('dsasdkokd')
-  });
-  
-       // On before slide change
-       $('.my-slider').on('reInit', function(slick){
-        console.log('dsasdkokd')
-      });
-      var scrollCount = null;
-        var scroll= null;
+    var scrollCount = null;
+    var scroll= null;
 
 
-      $(".my-slider").on('wheel', function(e) {
-        e.preventDefault();
+    $(".my-slider").on('wheel', function(e) {
+    e.preventDefault();
 
-        clearTimeout(scroll);
-        scroll = setTimeout(function(){scrollCount=0;}, 200);
-        if(scrollCount) return 0;
-        scrollCount=1;
-    
-        if (e.originalEvent.deltaY < 0) {
-            $(this).slick('slickNext');
-        } else {
-            $(this).slick('slickPrev');
-        }
-      });
+    clearTimeout(scroll);
+    scroll = setTimeout(function(){scrollCount=0;}, 200);
+    if(scrollCount) return 0;
+    scrollCount=1;
+
+    if (e.originalEvent.deltaY < 0) {
+        $(this).slick('slickNext');
+    } else {
+        $(this).slick('slickPrev');
+    }
+    });
       
-     // On before slide change
-$('.my-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
-    console.log($('.slick-slide.slick-current.slick-active>div>div').attr("id"))
-//     $(".slick-slide>div>div").css("color", rgba(255,255,255,0.5));
-    // $('.slick-slide.slick-current.slick-active>div>div').css("color","white");
-  });
+    $('.my-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
+        console.log($('.slick-slide.slick-current.slick-active>div>div').attr("id"))
+    });
   
-      
-
     $(".material-button").click(onLoginButtonClicked);
     $(".closeIcon").click(onLoginCloseClicked);
 
@@ -109,17 +95,47 @@ function loadLogoAnim() {
     // after gif logo finished
     setTimeout(() => {
         $("#loading_logo").attr("src", "COPS-LOGO.png");
+        $("#loading_logo").css("z-index", '31');
         $("#loading_logo").css("animation", 'fade 3s forwards');
     }, 6000);
 
 
     setTimeout(() => {
+        $(".bg-1").css("z-index","30");
+    },9000)
+
+    setTimeout(()=> {
+        $(".bg-2").css("z-index","29");
+    },9200);
+
+    setTimeout(()=> {
+        $(".bg-3").css("z-index","28");
+    },9400);
+
+    setTimeout(()=> {
+        $(".bg-4").css("z-index","27");
+    },9600);
+
+    setTimeout(()=> {
+        $(".bg-5").css("z-index","26");
+    },9800);
+
+    setTimeout(()=> {
         $("#loading_logo_container").css('background', 'transparent');
+        $(".bg-1").css("z-index","");
+        $(".bg-2").css("z-index","");
+        $(".bg-3").css("z-index","");
+        $(".bg-4").css("z-index","");
+        $(".bg-5").css("z-index","");
+
+    },9900);
+
+    setTimeout(() => {
         $("#loading_logo").fadeOut(200);
         $("#loading_logo_container").fadeOut();
         $("#loading_logo_container").addClass("hide-important");
         $(".image_slide1>div>img").attr("src", "COPS-LOGO.png");
-    }, 9000);
+    }, 10000);
 
     setTimeout(()=> {
         $(".image_slide1>div>img").attr("src", "COPS-LOG_Anim_1.gif");
