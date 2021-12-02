@@ -6,35 +6,6 @@ var slideDownTimeout = null;
 
 
 $(document).ready(() => {
-    var cursor = $('#cursor');
-    var isCursorOnMaterial = false;
-
-    // $(window).mousemove(function (e) {
-    //     if (isCursorOnMaterial) 
-    //         return;
-        
-    //     cursor.css({
-    //         top: e.clientY - cursor.height() / 2,
-    //         left: e.clientX - cursor.width() / 2
-    //     });
-    // });
-
-    // $(".material-button").mouseout(function () {
-    //     isCursorOnMaterial = false;
-    //     cursor.removeClass("login_cursor");
-    //     cursor.html("")
-    // });
-
-    // $(".material-button").mousemove(function (e) {
-    //     isCursorOnMaterial = true;
-    //     cursor.addClass("login_cursor");
-    //     cursor.css({
-    //         top: e.clientY - cursor.height() / 1,
-    //         left: e.clientX - cursor.width() / 1
-    //     });
-    //     cursor.html("<div class='cursor_text'>LOGIN</div>");
-    // });
-
     $('.my-slider').slick({
         arrows: false,
         focusOnSelect:true,
@@ -47,6 +18,45 @@ $(document).ready(() => {
         centerMode:true,
       });
     
+    var cursor = $('#cursor');
+    var isCursorOnMaterial = false;
+
+    $(window).mousemove(function (e) {
+        if (isCursorOnMaterial) 
+            return;
+        
+        cursor.css({
+            top: e.clientY - cursor.height() / 2,
+            left: e.clientX - cursor.width() / 2
+        });
+    });
+
+    $(".material-button").mouseout(function () {
+        isCursorOnMaterial = false;
+        cursor.removeClass("login_cursor");
+        cursor.html("")
+    });
+
+    $(".material-button").mousemove(function (e) {
+        isCursorOnMaterial = true;
+        cursor.addClass("login_cursor");
+        cursor.css({
+            top: e.clientY - cursor.height() / 1,
+            left: e.clientX - cursor.width() / 1
+        });
+        cursor.html("<div class='cursor_text'>LOGIN</div>");
+    });
+
+  
+       // On before slide change
+$('.my-slider').on('init', function(slick){
+    console.log('dsasdkokd')
+  });
+  
+       // On before slide change
+       $('.my-slider').on('reInit', function(slick){
+        console.log('dsasdkokd')
+      });
       var scrollCount = null;
         var scroll= null;
 
@@ -87,6 +97,7 @@ $('.my-slider').on('afterChange', function(event, slick, currentSlide, nextSlide
 })
 
 function loadLogoAnim() {
+    $(".box").hide();
     $("#loading_logo").css("animation", 'none');
     $("#loading_logo").attr("src", "COPS-LOG_Anim_1.gif");
 
