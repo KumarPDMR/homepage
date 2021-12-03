@@ -229,7 +229,8 @@ input{
 
 .slick-slide {
     outline: none;
-    transform: rotateX(51deg) translateZ(0px)
+    transform: rotateX(51deg) translateZ(0px);
+    font-size: 20px;
 }
 
 /* animations */
