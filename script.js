@@ -187,9 +187,8 @@ function changeImg() {
     if (stopChangeImg) {
         return;
     }
-
+    
     let currentIndex = i;
-
     if (changeImgTimeout1 !== null) {
         clearTimeout(changeImgTimeout1);
     }
@@ -204,18 +203,15 @@ function changeImg() {
         $(".image_slide" + j).css("z-index", '-3');
     }
 
+    // setTimeout(function () {
+    // // },95);
+
     slideDownTimeout = setTimeout(function () {
-        if (currentIndex === 1) {
-            $(".image_slide" + currentIndex + ">div>img").attr("src", "COPS-LOGO.png")
-        }
-        else if (currentIndex === 2) {
-            $(".image_slide" + currentIndex + ">div>img").attr("src", "PDMR-logo.png.png")
-        }
-        else if (currentIndex === 3) {
-            $(".image_slide" + currentIndex + ">div>img").attr("src", "comp-logo.png")
-        }
+        $(".image_slide1>div>img").attr("src", "COPS-LOGO.png")
+        $(".image_slide2>div>img").attr("src", "PDMR-logo.png.png")
+        $(".image_slide3>div>img").attr("src", "comp-logo.png")
         $(".image_slide" + currentIndex).css("animation", 'slideDown 2s');
-    }, 400);
+    }, 200);
 
     if (i === 3) {
         i = 1;
@@ -223,17 +219,25 @@ function changeImg() {
         i = i + 1;
     }
 
-    $(".image_slide1>div>img").attr("src", "COPS-LOGO.png");
-    $(".image_slide1>div>img").attr("src", "COPS-LOG_Anim_1.gif");
-    $(".image_slide2>div>img").attr("src", "PDMR-logo-animation.gif_");
-    $(".image_slide2>div>img").attr("src", "PDMR-logo-animation.gif");
-    $(".image_slide3>div>img").attr("src", "Compuscript-logo-animation.gif_");
-    $(".image_slide3>div>img").attr("src", "Compuscript-logo-animation.gif");
 
+    setTimeout(() => {
+        $(".image_slide1>div>img").attr("src", "COPS-LOG_Anim_1.gif");
+        $(".image_slide2>div>img").attr("src", "PDMR-logo-animation.gif");
+        $(".image_slide3>div>img").attr("src", "Compuscript-logo-animation.gif");    
+    }, 1500);
+    // $(".image_slide1>div>img").attr("src", "COPS-LOGO.png");
+    // $(".image_slide2>div>img").attr("src", "PDMR-logo-animation.gif_");
+    // $(".image_slide3>div>img").attr("src", "Compuscript-logo-animation.gif_");
+
+
+// setTimeout(() => {
     $(".image_slide" + i).css("animation", 'slide 2s');
     $(".image_slide" + i).css("z-index", '2');
+// }, 1000);
 
-    changeImgTimeout1 = setTimeout("changeImg()", 5500);
+    changeImgTimeout1 = setTimeout(function (params) {
+        changeImg();    
+    }, 6250);
 }
 
 function onLoginButtonClicked() {
