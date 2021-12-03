@@ -209,8 +209,6 @@ input{
 }
 
  .slick-center {
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
     transform: scale(1) !important;
     color: white !important;
 }
