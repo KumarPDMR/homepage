@@ -229,6 +229,10 @@ input{
     height: 80px !important;
 }
 
+.slick-slide {
+    outline: none;
+}
+
 /* animations */
 
 @keyframes bounceInDown {

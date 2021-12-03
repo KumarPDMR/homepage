@@ -32,10 +32,8 @@ function initSlider() {
         swipeToSlide: true,
         Infinite: true,
         slidesToScroll: 1,
-        focusOnSelect: true,
         centerMode: true,
         rows: 1,
-        accessibility: true,
         adaptiveHeight: true,
         autoplay: false,
         draggable: true
@@ -62,6 +60,8 @@ function initSlider() {
             $(this).slick('slickPrev');
         }
     });
+
+    $(".slick-slide").attr("tabindex","-1");
 
 
     $('.my-slider').on('afterChange', function (event, slick, currentSlide, nextSlide) {
