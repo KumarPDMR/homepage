@@ -231,6 +231,7 @@ input{
 
 .slick-slide {
     outline: none;
+    transform: rotateX(51deg) translateZ(0px)
 }
 
 /* animations */
