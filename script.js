@@ -52,6 +52,7 @@ function initSlider() {
         if (scrollCount) 
             return 0;
         
+
         scrollCount = 1;
 
         if (e.originalEvent.deltaY < 0) {
@@ -61,7 +62,7 @@ function initSlider() {
         }
     });
 
-    $(".slick-slide").attr("tabindex","-1");
+    $(".slick-slide").attr("tabindex", "-1");
 
 
     $('.my-slider').on('afterChange', function (event, slick, currentSlide, nextSlide) {
@@ -76,6 +77,7 @@ function initCursor() {
     $(window).mousemove(function (e) {
         if (isCursorOnMaterial) 
             return;
+        
 
         cursor.css({
             top: e.clientY - cursor.height() / 2,
@@ -203,10 +205,17 @@ function changeImg() {
     }
 
     slideDownTimeout = setTimeout(function () {
-        if (currentIndex === 1)
-{        $(".image_slide"+currentIndex + ">div>img").attr("src","COPS-LOGO.png")
-}        $(".image_slide" + currentIndex).css("animation", 'slideDown 2s');
-    }, 200);
+        if (currentIndex === 1) {
+            $(".image_slide" + currentIndex + ">div>img").attr("src", "COPS-LOGO.png")
+        }
+        else if (currentIndex === 2) {
+            $(".image_slide" + currentIndex + ">div>img").attr("src", "PDMR-logo.png.png")
+        }
+        else if (currentIndex === 3) {
+            $(".image_slide" + currentIndex + ">div>img").attr("src", "comp-logo.png")
+        }
+        $(".image_slide" + currentIndex).css("animation", 'slideDown 2s');
+    }, 400);
 
     if (i === 3) {
         i = 1;
