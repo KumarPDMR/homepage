@@ -270,11 +270,11 @@ input{
     }
    
     90% {
-        transform: translateX(-340px);
+        transform: translateX(-25vw);
     }
   
     100% {
-        transform: translateX(-340px);
+        transform: translateX(-25vw);
     }
 }
 
