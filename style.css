@@ -168,7 +168,7 @@ html {
 
 .closeIcon {
     position: absolute;
-    top: -5%;
+    top: -18%;
     background: #80d8ff;
     width: 50px;
     height: 50px;
@@ -227,6 +227,44 @@ input{
     outline: none;
     /* font-size: 20px; */
 }
+
+
+.main {
+    font-family:Arial;
+    width:300px;
+    display:block;
+    margin:0 auto;
+  }
+  h3 {
+      line-height: 10px;
+      /* margin: 6px; */
+      padding: 5px;
+      position: relative;
+      text-align: center;
+  }
+  
+  .slick-vertical .slick-slide {
+    opacity: 0.5;
+    transform: scale(0.7) rotateX(40deg);
+  }
+  
+  .slick-vertical .slick-current {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  #loading_text {
+      border-radius: 20px;
+    background: #fff;
+    color: #3498db;
+    font-size: 36px;
+    margin: 10px;
+    padding: 2%;
+    position: relative;
+    text-align: center;
+}
+
+
 /* animations */
 
 @keyframes bounceInDown {
@@ -261,7 +299,7 @@ input{
 @keyframes fade {
     0% {
         transform: translateX(0);
-    }
+=    }
    
     90% {
         transform: translateX(-25vw);

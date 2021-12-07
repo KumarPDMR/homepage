@@ -6,6 +6,7 @@ var slideDownTimeout = null;
 
 
 $(document).ready(() => {
+    $("#loading_text").css("display","none");
     for (let index = 0; index <= 3; index++) {
         $("#loading_text").children().eq(index).css("display","none");
     }
@@ -34,13 +35,13 @@ function initSlider() {
         verticalSwiping: true,
         swipeToSlide: true,
         Infinite: true,
-        slidesToScroll: 1,
         centerMode: true,
         rows: 1,
         adaptiveHeight: true,
         autoplay: false,
         draggable: true
     });
+     
 
     var scrollCount = null;
     var scroll = null;
@@ -128,6 +129,7 @@ function loadLogoAnim() {
     $("#loading_logo").attr("src", "COPS-LOG_Anim_1.gif");
 
     setTimeout(()=> {
+        $("#loading_text").css("display","");
         $("#loading_text").children().eq(0).fadeIn();
     },300);
 
@@ -199,7 +201,7 @@ function loadLogoAnim() {
 
     setTimeout(() => {
         changeImg();
-    }, 16000);
+    }, 17000);
 }
 
 function changeImg() {
@@ -254,9 +256,9 @@ function changeImg() {
     $(".image_slide" + i).css("z-index", '2');
 // }, 1000);
 
-    changeImgTimeout1 = setTimeout(function (params) {
+    changeImgTimeout1 = setTimeout(function () {
         changeImg();    
-    }, 6250);
+    }, 6800);
 }
 
 function onLoginButtonClicked() {
