@@ -6,6 +6,9 @@ var slideDownTimeout = null;
 
 
 $(document).ready(() => {
+    for (let index = 0; index <= 3; index++) {
+        $("#loading_text").children().eq(index).css("display","none");
+    }
     $(".closeIcon").hide();
     $(".hide-top").hide();
 
@@ -124,6 +127,20 @@ function loadLogoAnim() {
     $("#loading_logo").css("animation", 'none');
     $("#loading_logo").attr("src", "COPS-LOG_Anim_1.gif");
 
+    setTimeout(()=> {
+        $("#loading_text").children().eq(0).fadeIn();
+    },300);
+
+    setTimeout(()=> {
+        $("#loading_text").children().eq(1).fadeIn();
+    },1500);
+    setTimeout(()=> {
+        $("#loading_text").children().eq(2).fadeIn();
+    },3400);
+    setTimeout(()=> {
+        $("#loading_text").children().eq(3).fadeIn();
+    },4400);
+
     setTimeout(function () {
         $("#main_container").attr("style", "");
     }, 2000);
@@ -133,9 +150,11 @@ function loadLogoAnim() {
         $("#loading_logo").attr("src", "COPS-LOGO.png");
         $("#loading_logo").css("z-index", '31');
         $("#loading_logo").css("animation", 'fade 3s forwards');
+        $("#loading_text").css("animation", 'fade 3s forwards');
     }, 6000);
 
     setTimeout(() => {
+        $("#loading_text").fadeOut();
         $(".bg-1").css("z-index", "109");
         $(".image_slide1").css("z-index", "112");
     }, 9000)
