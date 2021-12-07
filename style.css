@@ -162,7 +162,7 @@ html {
 .box {
     width: 300px;
     height: 500px;
-    background: #0288d1;
+    background: transparent;
     border-radius: 10px;
     box-shadow: 0 0 10px;
 }
@@ -209,7 +209,7 @@ input{
 }
 
  .slick-center {
-    transform: scale(1) !important;
+    transform: scale(1) ;
     color: white !important;
 }
 
@@ -223,16 +223,11 @@ input{
     border-radius: 10px;
 }
 
-.slick-list {
-    height: 80px !important;
-}
 
 .slick-slide {
     outline: none;
-    transform: rotateX(56deg);
-    font-size: 20px;
+    /* font-size: 20px; */
 }
-
 /* animations */
 
 @keyframes bounceInDown {
