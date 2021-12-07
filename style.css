@@ -207,6 +207,10 @@ input{
 	border-radius: 5px;
 }
 
+.forget_pwd>a {
+    color: white;
+}
+
  .slick-center {
     transform: scale(1) ;
     color: white !important;
@@ -264,6 +268,9 @@ input{
     text-align: center;
 }
 
+.slide_anim {
+    animation: slideDown 2s;
+}
 
 /* animations */
 
@@ -299,7 +306,7 @@ input{
 @keyframes fade {
     0% {
         transform: translateX(0);
-=    }
+    }
    
     90% {
         transform: translateX(-25vw);
@@ -323,7 +330,7 @@ input{
 
 @keyframes slideDown {
     0% {
-        transform:translateY(-50px)
+        transform:translateY(0px)
     }
     100% {
         transform: translateY(500px);
