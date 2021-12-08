@@ -272,8 +272,10 @@ function onLoginButtonClicked() {
     }
 
     $(".image_slide" + 1).css("z-index", '2');
+    $(".image_slide1").css("animation", 'none');
     for (let j = 2; j <= 3; j++) {
         $(".image_slide" + j).css("z-index", '');
+        $(".image_slide" + j).css("animation", 'none');
     }
 
     $(".image_slide1>div>img").attr("src", "COPS-LOGO.png");
