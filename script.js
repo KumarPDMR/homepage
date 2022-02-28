@@ -196,7 +196,7 @@ function loadLogoAnim() {
 
   setTimeout(() => {
     $(".image_slide1>div>img").attr("src", "COPS-LOG_Anim_1.gif");
-  }, 11700);
+  }, 12700);
 
   setTimeout(() => {
     changeImg();
@@ -241,7 +241,7 @@ function changeImg() {
     $(".image_slide1>div>img").attr("src", "COPS-LOG_Anim_1.gif");
     $(".image_slide2>div>img").attr("src", "PDMR-logo-animation.gif");
     $(".image_slide3>div>img").attr("src", "Compuscript-logo-animation.gif");
-  }, 1500);
+  }, 2500);
 
   $(".image_slide" + i).css("animation", "slide 2s");
   $(".image_slide" + i).css("z-index", "2");
