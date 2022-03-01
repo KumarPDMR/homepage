@@ -247,7 +247,7 @@ function changeImg() {
   }
 
   gifAnimTimeout = setTimeout(() => {
-    $(".image_slide1>div>img").attr("src", "../assests/cops_logo_anim.gif");
+    $(".image_slide1>div>img").attr("src", "../assests/cops_logo_anim_b.gif");
     $(".image_slide2>div>img").attr(
       "src",
       "../assests/pdmr_logo_animation.gif"
@@ -333,7 +333,7 @@ function onLoginCloseClicked() {
   $(".image_slide3").css("z-index", "-3");
 
   $(".image_slide1>div>img").attr("src", "../assests/cops_logo.png");
-  $(".image_slide1>div>img").attr("src", "../assests/cops_logo_anim.gif");
+  $(".image_slide1>div>img").attr("src", "../assests/cops_logo_anim_b.gif");
 
   if (changeImgTimeout !== null) {
     clearTimeout(changeImgTimeout);

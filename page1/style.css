@@ -6,8 +6,8 @@
   -khtml-user-select: none; /* Konqueror HTML */
   -moz-user-select: none; /* Old versions of Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently
-                                    supported by Chrome, Edge, Opera and Firefox */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+  font-family: "Inter", sans-serif;
 }
 
 html {
@@ -133,6 +133,10 @@ html {
   width: 300px;
   height: 500px;
   border-radius: 20px;
+}
+
+.image_slide1 {
+  background-image: url("../assests/image_slide1.svg");
 }
 
 .material-button {
