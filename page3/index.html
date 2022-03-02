@@ -28,45 +28,35 @@
                 <div id="image_slide_container"
                     class="d-flex justify-content-center align-items-center flex-column overflow-hidden">
 
-                    <div style="position: relative; " class="w-100 h-100">
+                    <div class="frame" style="position: relative">
+                        <div class="wrapper" style="">
+                            <input type="radio" name="slide" id="one" checked>
+                            <input type="radio" name="slide" id="two">
+                            <input type="radio" name="slide" id="three">
 
-                        <div
-                            style="width:400px;height:600px;background-image: url(../assests/Logo-animation-window.png);">
-
-                            <div class="image_slide1" style="z-index: 2;">
-                                <div class="d-flex justify-content-center align-items-center"
-                                    style=" width: 400px; height: 600px;border-radius: 20px; background-image: url(../assests/pdmr_bg.jpeg);">
-                                    <img style="width: 300px;height: 300px;" src="../assests/cops_logo.png" alt="" />
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div
-                            style="width:400px;height:600px;background-image: url(../assests/Logo-animation-window.png);">
-
-
-                            <div class="image_slide2">
-                                <div class="d-flex justify-content-center align-items-center"
-                                    style=" width: 400px; height: 600px;border-radius: 20px; background-color: lightcyan;">
-                                    <img style="width: 300px;height: 300px;" src="" alt="" />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div
-                            style="width:400px;height:600px;background-image: url(../assests/Logo-animation-window.png);">
-
-
-                            <div class="image_slide3">
-                                <div class="d-flex justify-content-center align-items-center"
-                                    style=" width: 400px; height: 600px;border-radius: 20px; background-color:#98FB98;">
-                                    <img style="width: 300px;height: 300px;" src="" alt="" />
+                            <div class="img img-1">
+                                <div style="background-color: aqua;">
+                                    <img style="width: 300px;height: 300px; margin: 100px 33px;"
+                                        src="../assests/cops_logo.png" alt="">
                                 </div>
                             </div>
 
-                        </div>
+                            <div class="img img-2">
+                                <div style="background-color:yellow;">
+                                    <img style="width: 300px;height: 300px;margin: 100px 33px;"
+                                        src="../assests/pdmr_logo.png" alt="">
+                                </div>
+                            </div>
 
+                            <div class="img img-3">
+                                <div style="background-color:violet;">
+                                    <img style="width: 300px;height: 300px;margin: 100px 33px;"
+                                        src="../assests/comp_logo.png" alt="">
+                                </div>
+                            </div>
+
+
+                        </div>
                     </div>
 
                 </div>
@@ -82,13 +72,31 @@
 
                     <div class="box" style="display: none;">
 
-                        <div class="onoffswitch">
+                        <!-- <div class="onoffswitch">
                             <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch"
                                 tabindex="0" checked>
                             <label class="onoffswitch-label" for="myonoffswitch">
                                 <span class="onoffswitch-inner"></span>
                                 <span class="onoffswitch-switch"></span>
                             </label>
+                        </div> -->
+
+
+                        <div style="margin-top:100px">
+
+                            <ul class="slider">
+                                <li></li>
+                                <li class="active-item">
+                                    <span>
+                                        <i class="fa fa-chevron-down"></i>
+                                    </span>
+                                    <span>
+                                        Books
+                                    </span>
+                                </li>
+                                <li>Journals</li>
+                            </ul>
+
                         </div>
 
 

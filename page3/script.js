@@ -1,4 +1,5 @@
-var i = 1;
+var index = 1;
+var imageList = ["one", "two", "three"];
 var stopChangeImg = false;
 var changeImgTimeout = null;
 var changeImgTimeout1 = null;
@@ -9,49 +10,40 @@ $(document).ready(() => {
   $("#login_show_form").click(onLoginButtonClicked);
   $(".closeIcon").click(onLoginCloseClicked);
 
+  $(`.img-2>div>img`).addClass("frag");
+  $(`.img-1>div>img`).addClass("frag");
+  $(`.img-3>div>img`).addClass("frag");
+
   changeImg();
 });
 
 function changeImg() {
-  if (stopChangeImg) {
-    return;
-  }
+  if (stopChangeImg) return;
 
-  $(".image_slide" + i).css("z-index", "1");
+  $(`.img-1>div>img`).attr("src", "../assests/cops_logo.png");
+  $(`.img-2>div>img`).attr("src", "../assests/pdmr_logo.png");
+  $(`.img-3>div>img`).attr("src", "../assests/comp_logo.png");
 
-  for (let j = 1; j <= 3; j++) {
-    if (j === i) {
-      continue;
-    }
+  $(`#${imageList[index - 1]}`).prop("checked", true);
 
-    $(".image_slide" + j).css("z-index", "-3");
-  }
-
-  if (i === 3) {
-    i = 1;
+  if (index === 3) {
+    index = 1;
   } else {
-    i = i + 1;
+    index = index + 1;
   }
 
-  gifAnimTimeout = setTimeout(() => {
-    $(".image_slide1>div>img").attr("src", "../assests/cops_logo_anim_b.gif");
-    $(".image_slide2>div>img").attr(
-      "src",
-      "../assests/pdmr_logo_animation.gif"
-    );
-    $(".image_slide3>div>img").attr(
+  setTimeout(() => {
+    $(`.img-1>div>img`).attr("src", "../assests/cops_logo_anim_b.gif");
+    $(`.img-2>div>img`).attr("src", "../assests/pdmr_logo_animation.gif");
+    $(`.img-3>div>img`).attr(
       "src",
       "../assests/compuscript_logo_animation.gif"
     );
   }, 3000);
 
-  $(".image_slide1>div>img").attr("src", "../assests/cops_logo.png");
-  $(".image_slide" + i).css("z-index", "2");
-  $(".image_slide" + i).css("animation", "flipOutY 2s");
-
-  changeImgTimeout1 = setTimeout(function () {
+  setTimeout(() => {
     changeImg();
-  }, 8500);
+  }, 9000);
 }
 
 function onLoginButtonClicked() {
