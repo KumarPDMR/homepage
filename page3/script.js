@@ -17,7 +17,6 @@ $(document).ready(() => {
   // $(`.img-1>div>img`).addClass("frag_1");
 
   initSlider();
-  onLoginButtonClicked();
   changeImg();
 });
 
@@ -100,12 +99,10 @@ function initSlider() {
       $("#slider_list>li").css("transform", "translateY(-52px)");
       $("#slider_current_text").attr("id", "");
       $("#slider_list").children().eq(1).attr("id", "slider_current_text");
-    }
-    else {
+    } else {
       $("#slider_list>li").css("transform", "translateY(-28px)");
       $("#slider_current_text").attr("id", "");
       $("#slider_list").children().eq(0).attr("id", "slider_current_text");
-
     }
   });
 }
