@@ -1,0 +1,92 @@
+body {
+  background-image: url("../assests/page2_bg.png");
+  background-size: 1365px 670px;
+  height: 100vh;
+}
+
+.frame {
+  background-size: 530px 350px;
+  width: 530px;
+  height: 350px;
+  background-image: url(../assests/laptop_frame.png);
+}
+
+.img {
+  width: 366px;
+  height: 237px;
+  margin: auto;
+  position: absolute;
+  top: 46px;
+  right: 82px;
+  display: none;
+}
+
+#one:checked ~ .img-1 {
+  display: block;
+}
+#two:checked ~ .img-2 {
+  display: block;
+}
+#three:checked ~ .img-3 {
+  display: block;
+}
+#four:checked ~ .img-4 {
+  display: block;
+}
+#five:checked ~ .img-5 {
+  display: block;
+}
+#six:checked ~ .img-6 {
+  display: block;
+}
+.fade1 {
+  -webkit-animation-name: fade1;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade1;
+  animation-duration: 1.5s;
+}
+
+.dot {
+  height: 8px;
+  width: 8px;
+  margin: 0 2px;
+  cursor: pointer;
+  background-color: deepskyblue;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.dot_class {
+  margin: -4.8% 0% 0% 13%;
+  position: absolute;
+}
+
+.login_btn {
+  position: absolute;
+  top: 44%;
+  left: 86%;
+  color: white;
+  font-size: 23px;
+  padding: 7px 60px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  background: transparent;
+  border-bottom-right-radius: 91px;
+  border-bottom-left-radius: 105px;
+}
+
+.video_container > div {
+  width: 300px;
+}
+
+/* animations */
+
+@keyframes fade1 {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
