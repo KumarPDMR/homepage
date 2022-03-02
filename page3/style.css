@@ -242,6 +242,7 @@ h3 {
   clip-path: circle(0% at 0% 100%);
   transition: all 2s;
 }
+
 #one:checked ~ .img-1 div {
   clip-path: circle(150% at 0% 100%);
 }

@@ -18,7 +18,7 @@ $(document).ready(() => {
 
   initSlider();
   onLoginButtonClicked();
-  // changeImg();
+  changeImg();
 });
 
 function changeImg() {
