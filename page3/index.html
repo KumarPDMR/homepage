@@ -82,25 +82,41 @@
                         </div> -->
 
 
-                        <div style="margin-top:100px">
+                        <!-- <div style="margin-top:100px">
 
-                            <ul class="slider">
-                                <li></li>
-                                <li class="active-item">
-                                    <span>
+                            <ul id="slider" class="slider">
+                                <li><span class="label"></span></li>
+                                <li id="active-item" class="active-item">
+                                    <span id="icon">
                                         <i class="fa fa-chevron-down"></i>
                                     </span>
-                                    <span>
+                                    <span id="sliderCurrentText" class="label">
                                         Books
                                     </span>
                                 </li>
-                                <li>Journals</li>
+                                <li><span class="label">Journals</span> </li>
                             </ul>
 
+                        </div> -->
+
+
+                        <div style="margin-top: 100px;">
+
+                            <div id="slider_container">
+                                <div id="slider_current_item">
+                                    <span id="slider_btn"></span>
+                                    <span id="slider_active"></span>
+                                </div>
+                                <ul id="slider_list">
+                                    <li id="slider_current_text">Books</li>
+                                    <li>Journals</li>
+                                </ul>
+
+                            </div>
                         </div>
 
 
-                        <div class="input-group  mx-auto my-3" style="width: 80%;">
+                        <div class="input-group mx-auto my-3" style="width: 80%;">
                             <div class="input-group-prepend">
                                 <span style="background-color: #00264D;color: white;" class="input-group-text"
                                     id="inputGroup-sizing-default"><i class="far fa-user"></i>

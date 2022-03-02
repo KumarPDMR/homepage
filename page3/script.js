@@ -10,11 +10,15 @@ $(document).ready(() => {
   $("#login_show_form").click(onLoginButtonClicked);
   $(".closeIcon").click(onLoginCloseClicked);
 
-  $(`.img-2>div>img`).addClass("frag");
-  $(`.img-1>div>img`).addClass("frag");
-  $(`.img-3>div>img`).addClass("frag");
+  // $(`.img-2>div>img`).addClass("frag");
+  // $(`.img-1>div>img`).addClass("frag");
+  // $(`.img-3>div>img`).addClass("frag");
 
-  changeImg();
+  // $(`.img-1>div>img`).addClass("frag_1");
+
+  initSlider();
+  onLoginButtonClicked();
+  // changeImg();
 });
 
 function changeImg() {
@@ -84,4 +88,24 @@ function onLoginCloseClicked() {
     changeImgTimeout = null;
   }
   changeImgTimeout = setTimeout("changeImg()", 5500);
+}
+
+function initSlider() {
+  $("#slider_btn").click(function () {
+    let curText = $("#slider_current_text").text();
+
+    console.log(curText);
+
+    if (curText.trim() === "Books") {
+      $("#slider_list>li").css("transform", "translateY(-52px)");
+      $("#slider_current_text").attr("id", "");
+      $("#slider_list").children().eq(1).attr("id", "slider_current_text");
+    }
+    else {
+      $("#slider_list>li").css("transform", "translateY(-28px)");
+      $("#slider_current_text").attr("id", "");
+      $("#slider_list").children().eq(0).attr("id", "slider_current_text");
+
+    }
+  });
 }
