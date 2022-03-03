@@ -61,6 +61,15 @@ body {
   position: absolute;
 }
 
+#login_space {
+  width: 146px;
+  position: absolute;
+  right: 54px;
+  padding: 40px;
+  border-bottom-left-radius: 89%;
+  border-bottom-right-radius: 89%;
+}
+
 .login_btn {
   position: absolute;
   top: 44%;

@@ -99,6 +99,8 @@
         <div class="w-40 h-100" style="background-color: transparent;">
             <div class="d-flex justify-content-center align-items-center w-100 h-100">
 
+                <div id="login_space" style="position: absolute;"></div>
+
                 <div class="box" style="position: absolute;right: 45px;background-color: white; border-radius: 3px;   box-shadow: rgb(77 77 77) 2px 2px 4px 2px;
                 ">
 
@@ -166,7 +168,11 @@
 
             // $("#loading_logo_container").css("color", "blue");
 
+            $("#login_space").click(() => {
+                $(".box").fadeIn()
+            });
 
+            $(".box").hide();
 
             setTimeout(() => {
                 for (var s = 1; s <= 100; s++) {
