@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: radial-gradient(
+      circle at 80% -30%,
+      rgba(69, 114, 210, 0.4),
+      rgba(123, 69, 210, 0) 60%
+    ),
+    #202020;
+
+  color: white;
+
+  height: 100vh;
+}
+
+.topbar {
+  height: 10%;
+}
+
+.login_btn {
+  background-color: #2196f3;
+  color: #202020;
+  border: 0;
+}
+
+#main_container {
+  height: 90%;
+}
+
+.card {
+  height: 400px;
+  width: 400px;
+}
+
+.text_box {
+  width: 400px;
+  height: 400px;
+}
