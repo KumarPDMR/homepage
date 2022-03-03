@@ -21,10 +21,52 @@ body {
   height: 10%;
 }
 
+.logo {
+  margin-top: 3rem;
+  margin-left: 3rem;
+}
+
+.tour_btn {
+  color: white;
+  border: 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 3.3rem;
+}
+
+.tour_btn:hover {
+  background-color: #2196f3;
+  color: white;
+  border: 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border: 1px solid white;
+  border-radius: 3.3rem;
+}
+
 .login_btn {
   background-color: #2196f3;
-  color: #202020;
+  color: white;
   border: 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border: 1px solid white;
+  border-radius: 3.3rem;
+}
+
+.login_btn:hover {
+  background-color: transparent;
+  color: white;
+  border: 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 3.3rem;
+}
+
+.text_caps_color {
+  color: #1976D2;
 }
 
 #main_container {
@@ -34,9 +76,39 @@ body {
 .card {
   height: 400px;
   width: 400px;
+  transition: clip-path 1s;
+}
+
+.card:hover {
+  clip-path: circle(75%);
 }
 
 .text_box {
   width: 400px;
   height: 400px;
+}
+
+@keyframes circleClose {
+  0% {
+  }
+
+  10% {
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+  }
+
+  100% {
+    clip-path: circle(4% at 50% 50%);
+  }
+}
+
+@keyframes circle {
+  0% {
+    clip-path: circle(75%);
+  }
+  90% {
+    clip-path: circle(25%);
+  }
+  100% {
+    clip-path: circle(2%);
+  }
 }
