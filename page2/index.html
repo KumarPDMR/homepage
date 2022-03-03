@@ -11,14 +11,24 @@
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 
 
-    <link rel="stylesheet" href="http://127.0.0.1:5555/page2/style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
 
+    <!-- starting logo -->
+    <div id="loading_logo_container" class="w-100 h-100 "
+        style="background-color: #CFD8DC;z-index: 25; position: absolute;">
+        <img src="https://pdmrindia.co.in/developer/acmbooks/images/newdesign/OPS_intro.jpg" id="loading_logo"
+            style="width:100%; height:100%" />
+    </div>
+
+    <!-- end -->
+
+
     <div id="main_container" class="w-100 h-100 d-flex flex-row">
 
-        <div class="w-50 h-100 overflow-auto" style="background-color: transparent;">
+        <div class="w-40 h-100 overflow-auto" style="background-color: transparent;">
             <div class="d-flex justify-content-center align-items-center w-100 h-100">
                 <div id="image_slide_container"
                     class="d-flex justify-content-center align-items-center flex-column overflow-hidden">
@@ -82,46 +92,55 @@
             </div>
         </div>
 
-        <div class="w-50 h-100" style="background-color: transparent;">
+        <div class="w-20 h-100 overflow-auto d-flex align-items-center">
+            <img src="https://pdmrindia.co.in/developer/acmbooks/images/newdesign/COPS-logo-small.png" alt="" srcset="">
+        </div>
+
+        <div class="w-40 h-100" style="background-color: transparent;">
             <div class="d-flex justify-content-center align-items-center w-100 h-100">
 
+                <div class="box" style="position: absolute;right: 45px;background-color: white; border-radius: 3px;   box-shadow: rgb(77 77 77) 2px 2px 4px 2px;
+                ">
 
-                <div class="" id="" style="">
-                    <div class="login_body">
-                    <div class="row">
-                      <div class="col">
-                      <div class="row">
-                        <div class="col">
-                       <div class="slideshow-container">
-                        <span class="previousoption" id="arrow_up" onclick="plusSlides(-1)"><img src="https://pdmrindia.co.in/developer/acmbooks/images/Arrow-up.png" id="arrow_down2" style="width:19px;" alt="images"/></span>
-                       <div class="login_first_div" id="selection_1a">
+                    <div style="">
+
+                        <span class="previousoption" id="arrow_up" onclick="plusSlides(-1)"><img
+                                src="https://pdmrindia.co.in/developer/acmbooks/images/Arrow-up.png" id="arrow_down2"
+                                style="width:19px;" alt="images" /></span>
+                        <div class="login_first_div" id="selection_1a">
                             <select size="5" class="login_cate">
-                            <option class="myoptionbooks" value="books" disabled>BOOKS</option>
-                            <option class="myoptionbooks" value="journal" disabled>JOURNALS</option>
+                                <option class="myoptionbooks" value="books" disabled>BOOKS</option>
+                                <option class="myoptionbooks" value="journal" disabled>JOURNALS</option>
                             </select>
-                            </div>
-                            <span class="nextoption" id="arrow_down" onclick="plusSlides(1)"><img src="https://pdmrindia.co.in/developer/acmbooks/images/Arrow-down.png" id="arrow_down1" style="width:19px;" alt="images"/></span>
                         </div>
-                       </div>
-                       </div>
-                       <div class="row">
-                        <div class="col">
-                            <p class="User_login_head">USER LOGIN</p>
-                            <p class="login_border">&#x00A0;</p>
-                              <form id="login_form" name="login_form" action="#" method="post" style="text-align:center;">
-                            <input type="text" class="login_inputs" style='background-color:#f5f5f0;' placeholder="Username" name="user_name" id="user_name" autofocus /><br/> 
-                            <input type="password" class="login_inputs" style='background-color:#f5f5f0;' name="emp_pass" placeholder="Password" id="emp_pass" ><br/>
-                          <input type="submit" id="login_forma" value="LOGIN" name="login" style='color:white;background-color:#0146EC !important;margin:1em 0em 0.5em 0em;padding: 2px 15px;border-radius: 0px;font-size:13px;'>
-                          <p class="forget_pwd"><a href="https://pdmrindia.co.in/developer/acmbooks/index.php/home/forgot_password">Forgot password?</a></p>
-                      </form>
-                       </div>
-                       </div>
-                       </div>
+                        <span class="nextoption" id="arrow_down" onclick="plusSlides(1)"><img
+                                src="https://pdmrindia.co.in/developer/acmbooks/images/Arrow-down.png" id="arrow_down1"
+                                style="width:19px;" alt="images" /></span>
+
                     </div>
-                                </div>
-                    </div>
-                
-                
+
+
+                    <p class="User_login_head">USER LOGIN</p>
+                    <p class="login_border">&#x00A0;</p>
+                    <form id="login_form" name="login_form" action="#" method="post" style="text-align:center;">
+                        <input type="text" class="login_inputs" style='background-color:#f5f5f0;' placeholder="Username"
+                            name="user_name" id="user_name" autofocus /><br />
+                        <input type="password" class="login_inputs" style='background-color:#f5f5f0;' name="emp_pass"
+                            placeholder="Password" id="emp_pass"><br />
+                        <input type="submit" id="login_forma" value="LOGIN" name="login"
+                            style='color:white;background-color:#0146EC !important;margin:1em 0em 0.5em 0em;padding: 2px 15px;border-radius: 0px;font-size:13px;'>
+                        <p class="forget_pwd"><a
+                                href="https://pdmrindia.co.in/developer/acmbooks/index.php/home/forgot_password">Forgot
+                                password?</a></p>
+                    </form>
+
+
+                    <form id="login_form" name="login_form" action="#" method="post" style="text-align:center;">
+
+
+
+                    </form>
+                </div>
 
             </div>
         </div>
@@ -144,15 +163,28 @@
         var index = 1;
 
         $(document).ready(() => {
+
+            // $("#loading_logo_container").css("color", "blue");
+
+
+
+            setTimeout(() => {
+                for (var s = 1; s <= 100; s++) {
+                    subBannerFunction(s)
+                }
+            }, 1000);
+
+
+            // setTimeout(function () {
+            //     $("#loading_logo_container").css("display", "none");
+            // }, 6000);
             imageList.forEach(index => {
-            
                 $(`#${index}`).hide();
             });
             changeImg();
         });
 
         function changeImg() {
-            console.log("here");
 
             $(`#${imageList[index - 1]}`).prop("checked", true);
 
@@ -169,7 +201,16 @@
             }, 2000);
         }
 
-        changeImg();
+        function subBannerFunction(v) {
+
+            setTimeout(function () {
+                $("#loading_logo_container").css({
+                    transform: `translate(0%, -${v}%) translate3d(0px, 0px, 0px)`,
+                    display: "block",
+                });
+
+            }, v * 40);
+        }
 
     </script>
 </body>

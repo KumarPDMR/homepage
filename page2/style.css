@@ -80,6 +80,84 @@ body {
   width: 300px;
 }
 
+.login_first_div {
+  text-align: center;
+  border-bottom: 1px solid darkgray;
+  height: 67px;
+  margin: 0em 3em 0em 3em;
+}
+
+.login_cate > option {
+  margin: 0.5em 0em 0em 0em;
+  text-align: center;
+  padding: 0.3em 0em 0.3em 0em;
+  border-radius: 4px;
+  color: white;
+  background-color: #0146ec !important;
+}
+
+.login_cate {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  overflow-y: auto;
+  width: 150px;
+  color: white;
+  height: 36px !important;
+  margin: 0.6em 0em 0em 0em;
+}
+
+.previousoption {
+  cursor: pointer;
+  position: absolute;
+  top: -5px;
+  padding: 0px 0px 0px 0px;
+  left: 119px;
+  user-select: none;
+}
+
+.nextoption {
+  cursor: pointer;
+  position: absolute;
+  top: 43px;
+  padding: 0px 0px 0px 0px;
+  left: 119px;
+  user-select: none;
+}
+
+.login_inputs {
+  border-radius: 7px;
+  margin: 0.5em 0em 0em 0em;
+  border: 2px solid gray;
+  width: 159px;
+}
+
+.User_login_head {
+  color: gray;
+  font-weight: bold;
+  text-align: center;
+  margin: 0.7em 0em 0em 0em;
+}
+
+select {
+  /* for Firefox */
+  -moz-appearance: none;
+  /* for Chrome */
+  -webkit-appearance: none;
+}
+
+/* For IE10 */
+select::-ms-expand {
+  display: none;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+}
+
 /* animations */
 
 @keyframes fade1 {

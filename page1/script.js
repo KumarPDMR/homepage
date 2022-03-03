@@ -6,6 +6,23 @@ var slideDownTimeout = null;
 var gifAnimTimeout = null;
 
 $(document).ready(() => {
+  setTimeout(function () {
+    $("#loading_logo_container").attr();
+    document
+      .getElementsByClassName("login_bg1")[0]
+      .setAttribute(
+        "style",
+        "transform: translate(0%, -" +
+          v +
+          "%) translate3d(0px, 0px, 0px); display: block;"
+      );
+  }, 0);
+  setTimeout(function () {
+    document
+      .getElementsByClassName("login_bg1")[0]
+      .setAttribute("style", "display: none;");
+  }, 5000);
+
   $("#loading_text").css("display", "none");
   for (let index = 0; index <= 3; index++) {
     $("#loading_text").children().eq(index).css("display", "none");
