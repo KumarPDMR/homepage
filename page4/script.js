@@ -3,29 +3,28 @@ $(document).ready(() => {
 });
 
 function startAnim() {
-  $("#card>img").attr("src", "../assests/cops_logo.png");
+  $("#card>img").attr("src", "../assests/COPS_Static-logo_500pix.png");
 
   setTimeout(() => {
-      $("#card>img").attr("src", "../assests/cops_logo_anim_b.gif");
+    $("#card>img").attr("src", "../assests/COPS-logo-animation.gif");
   }, 2000);
 
   setTimeout(() => {
-      $("#card>img").attr("src", "../assests/cops_logo.png");
-
+    $("#card>img").attr("src", "../assests/COPS_Static-logo_500pix.png");
   }, 7500);
 
   setTimeout(() => {
-      $("#card").css("animation", "circleShrink 2s");
+    $("#card").css("animation", "circleShrink 2s");
   }, 8000);
 
   setTimeout(() => {
-      $("#card").css("animation", "circleScale 2s");
-      reset_animation("outline")
-      $("#outline").css("animation", "outlineScale 2s");
+    $("#card").css("animation", "circleScale 2s");
+    reset_animation("outline");
+    $("#outline").css("animation", "outlineScale 2s");
   }, 10000);
 
   setTimeout(() => {
-      startAnim();
+    startAnim();
   }, 12000);
 }
 
