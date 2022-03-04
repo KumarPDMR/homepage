@@ -109,7 +109,7 @@ body {
   background-color: transparent;
   border: 0;
   outline: 0;
-  overflow-y: auto;
+  overflow-y: hidden;
   width: 150px;
   color: white;
   height: 36px !important;

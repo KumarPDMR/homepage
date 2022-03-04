@@ -164,8 +164,8 @@ html {
 }
 
 .box {
-  width: 300px;
-  height: 500px;
+  width: 275px;
+  height: 375px;
   background: transparent;
   border-radius: 10px;
   box-shadow: 0 0 10px;
@@ -181,7 +181,7 @@ html {
 
 .closeIcon {
   position: absolute;
-  top: -18%;
+  top: -9%;
   background: #80d8ff;
   width: 50px;
   height: 50px;
@@ -246,10 +246,12 @@ input {
 }
 
 .main {
-  width: 300px;
+  width: 275px;
   display: block;
   margin: 0 auto;
+  margin-top: 10px;
 }
+
 h3 {
   line-height: 10px;
   /* margin: 6px; */
@@ -261,11 +263,20 @@ h3 {
 .slick-vertical .slick-slide {
   opacity: 0.5;
   transform: scale(0.7) rotateX(40deg);
+  font-size: 12px;
 }
 
 .slick-vertical .slick-current {
   opacity: 1;
   transform: scale(1);
+  background: rgb(0 123 255 / 25%);
+}
+
+.slick-vertical h3 {
+  font-size: 19px;
+  background: rgb(145 11 11 / 0%);
+  margin-top: 4px;
+  margin-bottom: 3px;
 }
 
 #loading_text {
