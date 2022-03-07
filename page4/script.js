@@ -6,7 +6,7 @@ function startAnim() {
   $("#card>img").attr("src", "../assests/COPS_Static-logo_200pix.png");
 
   setTimeout(() => {
-    $("#card>img").attr("src", "../assests/COPS-logo-animation.gif");
+    $("#card>img").attr("src", "../assests/cops_logo_anim_new.gif");
   }, 2000);
 
   setTimeout(() => {

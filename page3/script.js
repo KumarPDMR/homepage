@@ -23,7 +23,7 @@ function changeImg() {
   $(`.img-3>div>img`).attr("src", "../assests/compuscript_logo_animation.gif");
 
   setTimeout(() => {
-    $(`.img-1>div>img`).attr({ height: "150px" });
+    $(`.img-1>div>img`).attr({ height: "140px" });
     $(`.img-1>div>img`).attr("src", "../assests/COPS_Static-logo_200pix.png");
     $(`.img-2>div>img`).attr("src", "../assests/pdmr_logo.png");
     $(`.img-3>div>img`).attr("src", "../assests/comp_logo.png");

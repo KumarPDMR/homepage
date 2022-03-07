@@ -148,13 +148,13 @@ function loadLogoAnim() {
   $("#loading_logo").fadeIn();
   $("#loading_logo").attr("src", "../assests/cops_logo_anim_b.gif");
 
-  setTimeout(() => {
-    $("#loading_logo").attr({
-      src: "../assests/cops_logo.png",
-      width: "164px",
-      height: "188px",
-    });
-  }, 5800);
+  // setTimeout(() => {
+  //   $("#loading_logo").attr({
+  //     src: "../assests/cops_logo.png",
+  //     width: "164px",
+  //     height: "188px",
+  //   });
+  // }, 5800);
 
   setTimeout(() => {
     // $("#loading_logo").css("margin-top", "8%");
@@ -197,25 +197,27 @@ function loadLogoAnim() {
   setTimeout(() => {
     $("#loading_text").fadeOut();
     $("#loading_logo").fadeOut();
+
     $(".bg-1").css("z-index", "109");
     $(".image_slide1>div>img").css("z-index", "112");
-  }, 8500);
+  }, 5800);
 
   setTimeout(() => {
+    $("#loading_logo").attr("src", "");
     $(".bg-2").css("z-index", "108");
-  }, 10000);
+  }, 6500);
 
   setTimeout(() => {
     $(".bg-3").css("z-index", "107");
-  }, 10500);
+  }, 7000);
 
   setTimeout(() => {
     $(".bg-4").css("z-index", "106");
-  }, 11000);
+  }, 7500);
 
   setTimeout(() => {
     $(".bg-5").css("z-index", "105");
-  }, 11500);
+  }, 8000);
 
   setTimeout(() => {
     $("#loading_logo_container").css("background", "transparent");
@@ -228,21 +230,22 @@ function loadLogoAnim() {
     $(".image_slide1").fadeIn();
     $(".image_slide1>div>img").css("z-index", "");
     // $(".image_slide1>div>img").attr("src", "../assests/cops_logo.png");
-  }, 12000);
+  }, 9000);
 
   setTimeout(() => {
     // $("#loading_logo").fadeOut(200);
     $("#loading_logo_container").fadeOut();
     $("#loading_logo_container").addClass("hide-important");
-  }, 12200);
+  }, 10000);
 
   setTimeout(() => {
+    $(".image_slide1>div>img").attr("src", "");
     $(".image_slide1>div>img").attr("src", "../assests/cops_logo_anim_b.gif");
-  }, 12000);
+  }, 9000);
 
   setTimeout(() => {
     changeImg();
-  }, 16000);
+  }, 13000);
 }
 
 function changeImg() {
@@ -255,14 +258,14 @@ function changeImg() {
     clearTimeout(changeImgTimeout1);
   }
 
-  setTimeout(() => {
-    if (stopChangeImg) {
-      return;
-    }
-    $(".image_slide1>div>img").attr("src", "../assests/cops_logo.png");
-    $(".image_slide2>div>img").attr("src", "../assests/pdmr_logo.png");
-    $(".image_slide3>div>img").attr("src", "../assests/comp_logo.png");
-  }, 10000);
+  // setTimeout(() => {
+  //   if (stopChangeImg) {
+  //     return;
+  //   }
+  //   $(".image_slide1>div>img").attr("src", "../assests/cops_logo.png");
+  //   $(".image_slide2>div>img").attr("src", "../assests/pdmr_logo.png");
+  //   $(".image_slide3>div>img").attr("src", "../assests/comp_logo.png");
+  // }, 10000);
 
   slideDownTimeout = setTimeout(function () {
     if (stopChangeImg) {
