@@ -256,12 +256,18 @@ function changeImg() {
   }
 
   setTimeout(() => {
+    if (stopChangeImg) {
+      return;
+    }
     $(".image_slide1>div>img").attr("src", "../assests/cops_logo.png");
     $(".image_slide2>div>img").attr("src", "../assests/pdmr_logo.png");
     $(".image_slide3>div>img").attr("src", "../assests/comp_logo.png");
   }, 10000);
 
   slideDownTimeout = setTimeout(function () {
+    if (stopChangeImg) {
+      return;
+    }
     $(".image_slide" + currentIndex).css("animation", "none");
     $(".image_slide" + currentIndex).css("animation", "slideDown 2s");
     $(".image_slide1>div>img").hide();
@@ -286,6 +292,9 @@ function changeImg() {
   }
 
   gifAnimTimeout = setTimeout(() => {
+    if (stopChangeImg) {
+      return;
+    }
     $(".image_slide1>div>img").attr("src", "../assests/cops_logo_anim_b.gif");
     $(".image_slide2>div>img").attr(
       "src",
@@ -304,6 +313,9 @@ function changeImg() {
   // $(".image_slide1>div>img").attr("src", "../assests/cops_logo.png");
 
   setTimeout(() => {
+    if (stopChangeImg) {
+      return;
+    }
     $(".image_slide" + i).css("animation", "slide 2s");
     $(".image_slide" + i).css("z-index", "2");
   }, 2000);
@@ -336,6 +348,7 @@ function onLoginButtonClicked() {
   }
 
   $(".image_slide1>div>img").attr("src", "../assests/cops_logo.png");
+  $(".image_slide1>div>img").show();
 
   if ($(this).hasClass("material-button")) {
     $(this).css("box-shadow", "0 1px 2px rgba(0,0,0,0.15)");
@@ -377,14 +390,15 @@ function onLoginCloseClicked() {
   $(".image_slide2").css("z-index", "1");
   $(".image_slide3").css("z-index", "-3");
 
-  $(".image_slide1>div>img").attr("src", "../assests/cops_logo.png");
+  // $(".image_slide1>div>img").attr("src", "../assests/cops_logo.png");
   $(".image_slide1>div>img").attr("src", "../assests/cops_logo_anim_b.gif");
 
   if (changeImgTimeout !== null) {
     clearTimeout(changeImgTimeout);
     changeImgTimeout = null;
   }
-  changeImgTimeout = setTimeout("changeImg()", 5500);
+
+  changeImgTimeout = setTimeout("changeImg()", 4000);
 }
 
 $("#scroll-content").scroll(function (event) {

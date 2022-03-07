@@ -131,10 +131,6 @@ html {
   border-radius: 20px;
 }
 
-.image_slide1 {
-  background-image: url("../assests/image_slide1.svg");
-}
-
 .material-button {
   position: absolute;
   width: 55px;
