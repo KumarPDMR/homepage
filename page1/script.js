@@ -230,11 +230,11 @@ function loadLogoAnim() {
     // $(".image_slide1>div>img").attr("src", "../assests/cops_logo.png");
   }, 12000);
 
-  // setTimeout(() => {
-  //   $("#loading_logo").fadeOut(200);
-  //   $("#loading_logo_container").fadeOut();
-  //   $("#loading_logo_container").addClass("hide-important");
-  // }, 12200);
+  setTimeout(() => {
+    // $("#loading_logo").fadeOut(200);
+    $("#loading_logo_container").fadeOut();
+    $("#loading_logo_container").addClass("hide-important");
+  }, 12200);
 
   setTimeout(() => {
     $(".image_slide1>div>img").attr("src", "../assests/cops_logo_anim_b.gif");
@@ -341,9 +341,10 @@ function onLoginButtonClicked() {
     $(this).css("box-shadow", "0 1px 2px rgba(0,0,0,0.15)");
     $(".material-button>img").hide();
 
+    $(this).css("border", "0");
     $(this)
       .addClass("active")
-      .css({ "border-radius": "1px", transform: "scale(7,12.5)" });
+      .css({ "border-radius": "1px", transform: "scale(5,7)" });
 
     setTimeout(function () {
       $(".box").attr("style", "");
@@ -366,6 +367,7 @@ function onLoginCloseClicked() {
     $(".material-button>img").show();
     $(".material-button").css("box-shadow", "");
     $(".material-button").css("background-color", "transparent");
+    $(".material-button").css("border", "1px solid #ccc");
   }, 1000);
 
   stopChangeImg = false;
