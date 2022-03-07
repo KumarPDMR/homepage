@@ -256,29 +256,22 @@ h3 {
 
 #one:checked ~ .img-1 div {
   clip-path: circle(150% at 0% 100%);
+  background-color: #75caf1;
 }
+
 #two:checked ~ .img-1 div,
 #two:checked ~ .img-2 div {
   clip-path: circle(150% at 0% 100%);
+  background-color: #75caf1;
 }
+
 #three:checked ~ .img-1 div,
 #three:checked ~ .img-2 div,
 #three:checked ~ .img-3 div {
   clip-path: circle(150% at 0% 100%);
+  background-color: #75caf1;
 }
-#four:checked ~ .img-1 div,
-#four:checked ~ .img-2 div,
-#four:checked ~ .img-3 div,
-#four:checked ~ .img-4 div {
-  clip-path: circle(150% at 0% 100%);
-}
-#five:checked ~ .img-1 div,
-#five:checked ~ .img-2 div,
-#five:checked ~ .img-3 div,
-#five:checked ~ .img-4 div,
-#five:checked ~ .img-5 div {
-  clip-path: circle(150% at 0% 100%);
-}
+
 .wrapper .sliders {
   position: absolute;
   bottom: 20px;

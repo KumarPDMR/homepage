@@ -17,22 +17,9 @@ $(document).ready(() => {
 function changeImg() {
   if (stopChangeImg) return;
 
-  $(`#${imageList[index - 1]}`).prop("checked", true);
-
-  if (index === 3) {
-    index = 1;
-  } else {
-    index = index + 1;
-  }
-
-  setTimeout(() => {
-    $(`.img-1>div>img`).attr("src", "../assests/cops_logo_anim_b.gif");
-    $(`.img-2>div>img`).attr("src", "../assests/pdmr_logo_animation.gif");
-    $(`.img-3>div>img`).attr(
-      "src",
-      "../assests/compuscript_logo_animation.gif"
-    );
-  }, 10);
+  $(`.img-1>div>img`).attr("src", "../assests/cops_logo_anim_b.gif");
+  $(`.img-2>div>img`).attr("src", "../assests/pdmr_logo_animation.gif");
+  $(`.img-3>div>img`).attr("src", "../assests/compuscript_logo_animation.gif");
 
   setTimeout(() => {
     $(`.img-1>div>img`).attr("src", "../assests/cops_logo.png");
@@ -41,18 +28,27 @@ function changeImg() {
   }, 5500);
 
   setTimeout(() => {
+    if (index === 3) {
+      index = 1;
+    } else {
+      index = index + 1;
+    }
+
+    $(`#${imageList[index - 1]}`).prop("checked", true);
+  }, 6300);
+
+  setTimeout(() => {
     changeImg();
-  }, 5500);
+  }, 6800);
 }
 
 function onLoginButtonClicked() {
-  console.log("here");
   $("#login_show_form").addClass("rotateUp");
 
-  setTimeout(function () {
-    $(".box").css("display", "");
-    $(".box").addClass("animate__animated animate__rotateIn");
-  }, 500);
+  // setTimeout(function () {
+  $(".box").css("display", "");
+  $(".box").addClass("animate__animated animate__rotateIn");
+  // }, 500);
 }
 
 function onLoginCloseClicked() {
