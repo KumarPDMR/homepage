@@ -46,8 +46,13 @@ function changeImg() {
 
 function onLoginButtonClicked() {
   stopChangeImg = true;
-  $(`#${imageList[2]}`).prop("checked", true);
-  // $(`.img-1>div>img`).attr("src", "../assests/COPS_Static-logo_200pix.png");
+
+  $(".img-2").hide();
+  $(".img-3").hide();
+
+  // $(`#three`).prop("checked", true);
+  $(`.img-1>div>img`).css({ width: "", height: "", margin: "100px 23px" });
+  $(`.img-1>div>img`).attr("src", "../assests/COPS_Static-logo_200pix.png");
 
   $("#login_show_form").addClass("rotateUp");
 
@@ -73,12 +78,22 @@ function onLoginCloseClicked() {
   stopChangeImg = false;
   i = 1;
 
-  $(".image_slide1").css("z-index", "2");
-  $(".image_slide2").css("z-index", "1");
-  $(".image_slide3").css("z-index", "-3");
+  // $(".image_slide1").css("z-index", "2");
+  // $(".image_slide2").css("z-index", "1");
+  // $(".image_slide3").css("z-index", "-3");
+
+  $(".img-2").show();
+  $(".img-3").show();
+
+  $(`#${imageList[index - 1]}`).prop("checked", true);
 
   // $(".image_slide1>div>img").attr("src", "COPS-LOGO.png");
-  $(".image_slide1>div>img").attr("src", "cops_logo_anim_new.gif");
+  $(".img-1>div>img").attr("src", "cops_logo_anim_new.gif");
+  $(`.img-1>div>img`).css({
+    width: "200px",
+    height: "200px",
+    margin: "100px 33px",
+  });
 
   if (changeImgTimeout !== null) {
     clearTimeout(changeImgTimeout);
