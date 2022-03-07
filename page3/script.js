@@ -25,19 +25,24 @@ function changeImg() {
     index = index + 1;
   }
 
-  $(`.img-1>div>img`).attr("src", "../assests/cops_logo_anim_b.gif");
-  $(`.img-2>div>img`).attr("src", "../assests/pdmr_logo_animation.gif");
-  $(`.img-3>div>img`).attr("src", "../assests/compuscript_logo_animation.gif");
+  setTimeout(() => {
+    $(`.img-1>div>img`).attr("src", "../assests/cops_logo_anim_b.gif");
+    $(`.img-2>div>img`).attr("src", "../assests/pdmr_logo_animation.gif");
+    $(`.img-3>div>img`).attr(
+      "src",
+      "../assests/compuscript_logo_animation.gif"
+    );
+  }, 10);
 
   setTimeout(() => {
     $(`.img-1>div>img`).attr("src", "../assests/cops_logo.png");
     $(`.img-2>div>img`).attr("src", "../assests/pdmr_logo.png");
     $(`.img-3>div>img`).attr("src", "../assests/comp_logo.png");
-  }, 4000);
+  }, 5500);
 
   setTimeout(() => {
     changeImg();
-  }, 7500);
+  }, 5500);
 }
 
 function onLoginButtonClicked() {
@@ -83,8 +88,6 @@ function onLoginCloseClicked() {
 function initSlider() {
   $("#slider_btn").click(function () {
     let curText = $("#slider_current_text").text();
-
-    console.log(curText);
 
     if (curText.trim() === "Books") {
       $("#slider_list>li").css("transform", "translateY(-52px)");

@@ -242,7 +242,7 @@ function loadLogoAnim() {
 
   setTimeout(() => {
     changeImg();
-  }, 17000);
+  }, 16000);
 }
 
 function changeImg() {
@@ -259,7 +259,7 @@ function changeImg() {
     $(".image_slide1>div>img").attr("src", "../assests/cops_logo.png");
     $(".image_slide2>div>img").attr("src", "../assests/pdmr_logo.png");
     $(".image_slide3>div>img").attr("src", "../assests/comp_logo.png");
-  }, 700);
+  }, 10000);
 
   slideDownTimeout = setTimeout(function () {
     $(".image_slide" + currentIndex).css("animation", "none");
@@ -267,7 +267,7 @@ function changeImg() {
     $(".image_slide1>div>img").hide();
     $(".image_slide2>div>img").hide();
     $(".image_slide3>div>img").hide();
-  }, 1100);
+  }, 2000);
 
   $(".image_slide" + i).css("z-index", "1");
 
@@ -299,14 +299,14 @@ function changeImg() {
     $(".image_slide1>div>img").show();
     $(".image_slide2>div>img").show();
     $(".image_slide3>div>img").show();
-  }, 3000);
+  }, 4000);
 
-  $(".image_slide1>div>img").attr("src", "../assests/cops_logo.png");
+  // $(".image_slide1>div>img").attr("src", "../assests/cops_logo.png");
 
   setTimeout(() => {
     $(".image_slide" + i).css("animation", "slide 2s");
     $(".image_slide" + i).css("z-index", "2");
-  }, 1000);
+  }, 2000);
 
   changeImgTimeout1 = setTimeout(function () {
     changeImg();
