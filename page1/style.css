@@ -53,10 +53,6 @@ html {
   width: 200px;
   height: 200px;
   border: 0;
-  animation-fill-mode: both;
-  animation: bounceInDown;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
   /* transition: all 4s; */
   z-index: "10";
   background-color: transparent;
@@ -141,10 +137,11 @@ html {
 
 .material-button {
   position: absolute;
-  width: 42px;
-  height: 40px;
+  width: 55px;
+  height: 55px;
+  padding: 10px;
   border-radius: 50%;
-  border: 0;
+  border: 1px solid #ccc;
   background-color: transparent;
   z-index: 11;
   transition: all 2s;

@@ -1,16 +1,16 @@
 $(document).ready(() => {
-  startAnim();
+  // startAnim();
 });
 
 function startAnim() {
-  $("#card>img").attr("src", "../assests/COPS_Static-logo_500pix.png");
+  $("#card>img").attr("src", "../assests/COPS_Static-logo_200pix.png");
 
   setTimeout(() => {
     $("#card>img").attr("src", "../assests/COPS-logo-animation.gif");
   }, 2000);
 
   setTimeout(() => {
-    $("#card>img").attr("src", "../assests/COPS_Static-logo_500pix.png");
+    $("#card>img").attr("src", "../assests/COPS_Static-logo_200pix.png");
   }, 7500);
 
   setTimeout(() => {

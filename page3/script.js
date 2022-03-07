@@ -10,22 +10,12 @@ $(document).ready(() => {
   $("#login_show_form").click(onLoginButtonClicked);
   $(".closeIcon").click(onLoginCloseClicked);
 
-  // $(`.img-2>div>img`).addClass("frag");
-  // $(`.img-1>div>img`).addClass("frag");
-  // $(`.img-3>div>img`).addClass("frag");
-
-  // $(`.img-1>div>img`).addClass("frag_1");
-
   initSlider();
   changeImg();
 });
 
 function changeImg() {
   if (stopChangeImg) return;
-
-  $(`.img-1>div>img`).attr("src", "../assests/cops_logo.png");
-  $(`.img-2>div>img`).attr("src", "../assests/pdmr_logo.png");
-  $(`.img-3>div>img`).attr("src", "../assests/comp_logo.png");
 
   $(`#${imageList[index - 1]}`).prop("checked", true);
 
@@ -35,18 +25,19 @@ function changeImg() {
     index = index + 1;
   }
 
+  $(`.img-1>div>img`).attr("src", "../assests/cops_logo_anim_b.gif");
+  $(`.img-2>div>img`).attr("src", "../assests/pdmr_logo_animation.gif");
+  $(`.img-3>div>img`).attr("src", "../assests/compuscript_logo_animation.gif");
+
   setTimeout(() => {
-    $(`.img-1>div>img`).attr("src", "../assests/cops_logo_anim_b.gif");
-    $(`.img-2>div>img`).attr("src", "../assests/pdmr_logo_animation.gif");
-    $(`.img-3>div>img`).attr(
-      "src",
-      "../assests/compuscript_logo_animation.gif"
-    );
-  }, 3000);
+    $(`.img-1>div>img`).attr("src", "../assests/cops_logo.png");
+    $(`.img-2>div>img`).attr("src", "../assests/pdmr_logo.png");
+    $(`.img-3>div>img`).attr("src", "../assests/comp_logo.png");
+  }, 4000);
 
   setTimeout(() => {
     changeImg();
-  }, 9000);
+  }, 7500);
 }
 
 function onLoginButtonClicked() {
