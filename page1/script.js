@@ -264,6 +264,9 @@ function changeImg() {
   slideDownTimeout = setTimeout(function () {
     $(".image_slide" + currentIndex).css("animation", "none");
     $(".image_slide" + currentIndex).css("animation", "slideDown 2s");
+    $(".image_slide1>div>img").hide();
+    $(".image_slide2>div>img").hide();
+    $(".image_slide3>div>img").hide();
   }, 1100);
 
   $(".image_slide" + i).css("z-index", "1");
@@ -292,6 +295,10 @@ function changeImg() {
       "src",
       "../assests/compuscript_logo_animation.gif"
     );
+
+    $(".image_slide1>div>img").show();
+    $(".image_slide2>div>img").show();
+    $(".image_slide3>div>img").show();
   }, 3000);
 
   $(".image_slide1>div>img").attr("src", "../assests/cops_logo.png");
