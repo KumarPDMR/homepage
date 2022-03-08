@@ -366,6 +366,8 @@ form {
   display: block;
 }
 
+/* media queries */
+
 @keyframes circleShrink {
   0% {
     clip-path: circle(75%);
