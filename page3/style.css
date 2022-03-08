@@ -119,11 +119,13 @@ body {
 }
 
 .box {
-  width: 300px;
-  height: 400px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 0 10px;
+  width: 400px;
+  height: 500px;
+  background-image: url(../assests/login_panel_bg.png);
+  background-size: 400px 500px;
+  /* background: white; */
+  /* border-radius: 10px; */
+  /* box-shadow: 0 0 10px; */
 }
 
 .closeIcon {
