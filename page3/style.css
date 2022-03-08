@@ -428,6 +428,21 @@ input[type="radio"] {
   margin-left: 40px;
 }
 
+.login_form_btn {
+  color: white;
+  /* background: #385172; */
+  padding: 14px 15px;
+  border-radius: 20px;
+  border-top-left-radius: 0;
+  width: 57%;
+  margin: 20px 84px;
+  font-size: 13px;
+  border-top-right-radius: 0;
+  background-color: transparent;
+  border: 0;
+  font-size: 20px;
+}
+
 /* *** */
 
 #slider_current_item {
@@ -439,12 +454,15 @@ input[type="radio"] {
 }
 
 #slider_btn {
-  background-color: #385172;
+  /* background-color: #385172; */
+  background-size: 21px 41px;
+  background-image: url(../assests/login_slider_icon.png);
   padding: 10px;
   margin-top: -15px;
   margin-left: -10px;
-  border: 1px solid white;
-  border-radius: 40%;
+  /* border: 1px solid white; */
+  /* border-radius: 40%; */
+  /* background: transparent; */
 }
 
 #slider_list {
@@ -452,6 +470,7 @@ input[type="radio"] {
   text-align: center;
   width: 70%;
   margin: auto 15px;
+  height: 40px;
   /* transform: translateY(-50px); */
 }
 
@@ -465,7 +484,7 @@ input[type="radio"] {
 }
 
 .slider_container {
-  margin-top: 110px;
+  margin-top: 120px;
   width: 250px;
   margin-left: auto;
   margin-right: auto;
@@ -536,6 +555,7 @@ input[type="radio"] {
 @keyframes rotateInUp {
   0% {
     transform: translateY(0px) rotateZ(0deg);
+    opacity: 1;
   }
   /* 49% {
     transform: translateY(-100px) rotateZ(90deg);
@@ -545,6 +565,7 @@ input[type="radio"] {
   } */
   100% {
     transform: translateY(-200px) rotateZ(360deg);
+    opacity: 0;
   }
 }
 

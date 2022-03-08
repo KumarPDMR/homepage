@@ -65,11 +65,11 @@
         <div class="w-50 h-100" style="background-color: transparent;">
             <div class="d-flex justify-content-center align-items-center w-100 h-100">
                 <div class=" d-flex justify-content-center align-items-center flex-column ">
-                    <!-- <button id="login_show_form" class="material-button alt-2 ">
+                    <button id="login_show_form" class="material-button alt-2 ">
                         <img style="width: 100%;height: 100%;" src="../assests/Login-icon.png" alt="user" />
-                    </button> -->
+                    </button>
 
-                    <div class="box" style="background-image: url(../assests/login_panel_bg.png);">
+                    <div class="box" style="background-image: url(../assests/login_panel_bg.png);display: none;">
 
                         <div class="slider_container" style="">
                             <div id="slider_container">
@@ -88,7 +88,8 @@
                         <div class="input-group mx-auto my-3" style="width: 80%;margin-top: 0 !important;">
                             <div class="input-group-prepend">
                                 <span style="background-color: #00264D;color: white;" class="input-group-text"
-                                    id="inputGroup-sizing-default"><i class="far fa-user"></i>
+                                    id="inputGroup-sizing-default">
+                                    <i class="far fa-user"></i>
                                 </span>
                             </div>
                             <input style="background-color: #385172;" type="text" class="form-control"
@@ -98,25 +99,29 @@
                         <div class="input-group mb-3 mx-auto" style="width: 80%;">
                             <div class="input-group-prepend">
                                 <span style="background-color: #00264D;color: white;" class="input-group-text"
-                                    id="inputGroup-sizing-default"><i class="far fa-user"></i></span>
+                                    id="inputGroup-sizing-default">
+                                    <span style="background-image: url(../assests/login_pass_icon.png);"></span>
+                                    <i class="fad fa-lock-alt"></i>
                             </div>
                             <input style="background-color: #385172;" type="text" class="form-control"
                                 aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                         </div>
 
+                        <div style="width: 100%;">
 
-                        <!-- <div style="width: 100%;">
-                            <input type="submit" id="login_forma" value="LOGIN" name="login" style='color:white;background:#385172;padding: 2px 15px;border-radius: 20px;  width: 90%;margin: 0 15px;
-                        font-size:13px;' class="btn">
-                            <p class="" style="color: #385172;text-align: center;">
+                            <p class="" style="color: #385172;text-align: center;margin-top: 35px;">
                                 <a style="text-decoration: none;    color: #385172;
                                 " href="https://pdmrindia.co.in/developer/acmbooks/index.php/home/forgot_password">Forgot
                                     password?</a>
                             </p>
-                        </div>  -->
+                        </div>
 
 
 
+                        <div>
+                            <input type="submit" id="login_form" aria-colspan="" value="LOGIN" name="login" style=''
+                                class="login_form_btn">
+                        </div>
 
 
                     </div>
