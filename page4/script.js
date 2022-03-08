@@ -1,6 +1,24 @@
 var stopImageSliderAnim = false;
+var loginClicked = 0;
 
 $(document).ready(() => {
+  $(document).click(function (e) {
+    var container = $(".modal");
+
+
+    if ($(e.target).attr("id")  === "login_btn" && loginClicked !== 2) {
+      loginClicked++;
+      return;
+    }
+
+    // if the target of the click isn't the container nor a descendant of the container
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+      
+      $(".modal").modal("toggle");
+      loginClicked = 0;
+    }
+  });
+
   let startImgSlide = $("#image_slide");
 
   $("#img1").change(function () {
