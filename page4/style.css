@@ -250,7 +250,7 @@ form {
 /* radio btn */
 :root {
   --accent: rgb(0, 69, 158);
-  --border-width: 6px;
+  --border-width: 3px;
   --border-radius: 55px;
 }
 
@@ -260,7 +260,7 @@ form {
 
 .toggle {
   position: relative;
-  border: solid var(--border-width) var(--accent);
+  border: solid var(--border-width) #1976d2;
   border-radius: var(--border-radius);
   transition: transform cubic-bezier(0, 0, 0.3, 2) 0.4s;
   transform-style: preserve-3d;
@@ -291,7 +291,7 @@ form {
   padding: 5px;
   font-size: 14px;
   text-align: center;
-  color: var(--accent);
+  color: #1976d2;
   cursor: pointer;
 }
 
@@ -311,7 +311,7 @@ form {
   justify-content: center;
   align-items: center;
   font-size: 14px;
-  background-color: var(--accent);
+  background-color: #1976d2;
   border-top-right-radius: var(--border-radius);
   border-bottom-right-radius: var(--border-radius);
   transform-style: preserve-3d;
@@ -323,6 +323,28 @@ form {
   color: white;
   transition: transform 0s linear 0.25s;
   transform-style: preserve-3d;
+}
+
+/* slider */
+
+#image_slide1,
+#image_slide2 {
+  transform: scale(0);
+  transition: transform 2s;
+  position: absolute;
+  top: 88px;
+  width: 150px;
+  left: 8px;
+}
+
+#img1:checked + #image_slide1 {
+  transform: none;
+  display: block;
+}
+
+#img2:checked + #image_slide2 {
+  transform: none;
+  display: block;
 }
 
 @keyframes circleShrink {

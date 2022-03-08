@@ -1,4 +1,28 @@
+var stopImageSliderAnim = false;
+
 $(document).ready(() => {
+  let startImgSlide = $("#image_slide");
+
+  $("#img1").change(function () {
+    $("#image_slide").attr("src", "../assests/cops_logo_anim_new.gif");
+  });
+
+  $("#img2").change(function () {
+    $("#image_slide").attr("src", "../assests/pdmr_logo_animation.gif");
+  });
+
+  $("#img1").click(() => {
+    $("#img2").prop("checked", false);
+  });
+
+  $("#img2").click(() => {
+    $("#img1").prop("checked", false);
+  });
+
+  $("#login_btn").click(() => {
+    a();
+  });
+
   initModalAnim();
   initRadioBtn();
 });
@@ -52,6 +76,7 @@ function initModalAnim() {
       }
     }
     modalEl.removeAttr("data-end-hide");
+    stopImageSliderAnim = false;
   });
 
   modalEl.on("animationend", function () {
@@ -66,8 +91,32 @@ function initModalAnim() {
         modalEl.addClass(modalEl.attr("data-animate-in"));
       }
     }
+    stopImageSliderAnim = true;
   });
 }
+
+function a() {
+  $("#image_slide1").prop("src", "../assests/cops_logo_anim_new.gif");
+  $("#image_slide1").prop("src", "../assests/pdmr_logo_animation.gif");
+
+  $("#img1").prop("checked", true);
+  $("#img2").prop("checked", false);
+  console.log("slide started");
+
+  setTimeout(() => {
+    $("#image_slide2").prop("src", "../assests/pdmr_logo_animation.gif");
+    $("#image_slide2").prop("src", "../assests/cops_logo_anim_new.gif");
+
+    $("#img2").prop("checked", true);
+    $("#img1").prop("checked", false);
+  }, 7000);
+
+  setTimeout(() => {
+    a();
+  }, 12000);
+}
+
+function startImgSlide() {}
 
 function startAnim() {
   $("#card>img").attr("src", "../assests/COPS_Static-logo_200pix.png");
