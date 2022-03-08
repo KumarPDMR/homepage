@@ -118,7 +118,6 @@ function startImageSlide() {
 
   $("#img1").prop("checked", true);
   $("#img2").prop("checked", false);
-  console.log("slide started");
 
   setTimeout(() => {
     $("#image_slide2").prop("src", "../assests/pdmr_logo_animation.gif");
@@ -126,11 +125,11 @@ function startImageSlide() {
 
     $("#img2").prop("checked", true);
     $("#img1").prop("checked", false);
-  }, 7000);
+  }, 6800);
 
   setTimeout(() => {
     startImageSlide();
-  }, 12000);
+  }, 13000);
 }
 
 function startAnim() {

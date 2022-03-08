@@ -226,6 +226,8 @@ function loadLogoAnim() {
     $(".bg-3").css("z-index", "");
     $(".bg-4").css("z-index", "");
     $(".bg-5").css("z-index", "");
+    $("#image_slide_container").hide();
+    $("#image_slide_container").fadeIn();
     $(".image_slide1").css("z-index", "2");
     $(".image_slide1").fadeIn();
     $(".image_slide1>div>img").css("z-index", "");
