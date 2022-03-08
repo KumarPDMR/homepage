@@ -1,20 +1,9 @@
 $(document).ready(() => {
-  $("#login_btn").click(function () {
-    console.log("here");
-    onloginClicked();
-  });
-
-  radioBtn();
+  initModalAnim();
+  initRadioBtn();
 });
 
-function onloginClicked() {
-  console.log("hjuibfvcjxki");
-  $("#exampleModal").attr({ left: "1000px", top: "171px" });
-  $("#exampleModal").attr("display", "block");
-  $("#exampleModal").attr({ left: "300px", top: "171px" });
-}
-
-function radioBtn() {
+function initRadioBtn() {
   const st = {};
 
   st.flap = document.querySelector("#flap");
@@ -46,6 +35,38 @@ function radioBtn() {
   });
 
   document.addEventListener("click", (e) => st.clickHandler(e));
+}
+
+function initModalAnim() {
+  let modalEl = $(".modal");
+  modalEl.addClass(modalEl.attr("data-animate-in"));
+
+  modalEl.on("hide.bs.modal", function (event) {
+    console.log("modal end");
+    if (!modalEl.attr("data-end-hide") && modalEl.attr("data-animate-out")) {
+      event.preventDefault();
+
+      modalEl.addClass(modalEl.attr("data-animate-out"));
+      if (modalEl.attr("data-animate-in")) {
+        modalEl.removeClass(modalEl.attr("data-animate-in"));
+      }
+    }
+    modalEl.removeAttr("data-end-hide");
+  });
+
+  modalEl.on("animationend", function () {
+    if (
+      modalEl.attr("data-animate-out") &&
+      modalEl.hasClass(modalEl.attr("data-animate-out"))
+    ) {
+      modalEl.attr("data-end-hide", true);
+      modalEl.modal("hide");
+      modalEl.removeClass(modalEl.attr("data-animate-out"));
+      if (modalEl.attr("data-animate-in")) {
+        modalEl.addClass(modalEl.attr("data-animate-in"));
+      }
+    }
+  });
 }
 
 function startAnim() {
