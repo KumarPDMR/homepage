@@ -1,6 +1,52 @@
 $(document).ready(() => {
-  // startAnim();
+  $("#login_btn").click(function () {
+    console.log("here");
+    onloginClicked();
+  });
+
+  radioBtn();
 });
+
+function onloginClicked() {
+  console.log("hjuibfvcjxki");
+  $("#exampleModal").attr({ left: "1000px", top: "171px" });
+  $("#exampleModal").attr("display", "block");
+  $("#exampleModal").attr({ left: "300px", top: "171px" });
+}
+
+function radioBtn() {
+  const st = {};
+
+  st.flap = document.querySelector("#flap");
+  st.toggle = document.querySelector(".toggle");
+
+  st.choice1 = document.querySelector("#choice1");
+  st.choice2 = document.querySelector("#choice2");
+
+  st.flap.addEventListener("transitionend", () => {
+    if (st.choice1.checked) {
+      st.toggle.style.transform = "rotateY(-15deg)";
+      setTimeout(() => (st.toggle.style.transform = ""), 400);
+    } else {
+      st.toggle.style.transform = "rotateY(15deg)";
+      setTimeout(() => (st.toggle.style.transform = ""), 400);
+    }
+  });
+
+  st.clickHandler = (e) => {
+    if (e.target.tagName === "LABEL") {
+      setTimeout(() => {
+        st.flap.children[0].textContent = e.target.textContent;
+      }, 250);
+    }
+  };
+
+  document.addEventListener("DOMContentLoaded", () => {
+    st.flap.children[0].textContent = st.choice2.nextElementSibling.textContent;
+  });
+
+  document.addEventListener("click", (e) => st.clickHandler(e));
+}
 
 function startAnim() {
   $("#card>img").attr("src", "../assests/COPS_Static-logo_200pix.png");
