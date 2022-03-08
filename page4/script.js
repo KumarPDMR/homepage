@@ -20,7 +20,7 @@ $(document).ready(() => {
   });
 
   $("#login_btn").click(() => {
-    a();
+    startImageSlide();
   });
 
   initModalAnim();
@@ -95,7 +95,7 @@ function initModalAnim() {
   });
 }
 
-function a() {
+function startImageSlide() {
   $("#image_slide1").prop("src", "../assests/cops_logo_anim_new.gif");
   $("#image_slide1").prop("src", "../assests/pdmr_logo_animation.gif");
 
@@ -105,18 +105,16 @@ function a() {
 
   setTimeout(() => {
     $("#image_slide2").prop("src", "../assests/pdmr_logo_animation.gif");
-    $("#image_slide2").prop("src", "../assests/cops_logo_anim_new.gif");
+    $("#image_slide2").prop("src", "../assests/compuscript_logo_animation.gif");
 
     $("#img2").prop("checked", true);
     $("#img1").prop("checked", false);
   }, 7000);
 
   setTimeout(() => {
-    a();
+    startImageSlide();
   }, 12000);
 }
-
-function startImgSlide() {}
 
 function startAnim() {
   $("#card>img").attr("src", "../assests/COPS_Static-logo_200pix.png");

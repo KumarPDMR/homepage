@@ -2,6 +2,21 @@
 @import url("http://fonts.cdnfonts.com/css/aldo-the-apache");
 @import url("http://fonts.cdnfonts.com/css/century-gothic");
 
+@font-face {
+  font-family: "Aldo the Apache";
+  src: URL("../assests/fonts/AldotheApache.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Century Gothic";
+  src: URL("../assests/fonts/Century\ Gothic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "MerryWeather";
+  src: URL("../assests/fonts/Merriweather-Regular.ttf") format("truetype");
+}
+
 * {
   font-family: "Inter", sans-serif;
   -webkit-touch-callout: none; /* iOS Safari */
@@ -164,6 +179,7 @@ body {
   margin: auto auto;
   display: flex;
 }
+
 .company__info {
   background-color: #1976d2;
   border-top-left-radius: 20px;
@@ -173,9 +189,11 @@ body {
   justify-content: center;
   color: #fff;
 }
+
 .fa-android {
   font-size: 3em;
 }
+
 @media screen and (max-width: 640px) {
   .main-content {
     width: 90%;
@@ -193,6 +211,7 @@ body {
     width: 70%;
   }
 }
+
 .row > h2 {
   color: #008080;
 }
@@ -231,7 +250,7 @@ form {
   color: #008080;
   font-weight: 600;
   background-color: #fff;
-  border: 1px solid #008080;
+  border: 1px solid #1976d2;
   /* margin-top: 1.5em; */
   /* margin-bottom: 1em; */
   margin: 10px auto;
@@ -239,7 +258,7 @@ form {
 
 .loginbtn:hover,
 .loginbtn:focus {
-  background-color: #008080;
+  background-color: #1976d2;
   color: #fff;
 }
 
