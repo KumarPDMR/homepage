@@ -35,12 +35,12 @@ body {
     ),
     #202020; */
 
-  background-image: url("../assests/bg/page4_bg.png");
-
+  background-image: url(../assests/bg/page4_bg.png);
   color: white;
-
   height: 100vh;
+  background-repeat: no-repeat;
   overflow: hidden;
+  background-size: 100% 100%;
 }
 
 .topbar {

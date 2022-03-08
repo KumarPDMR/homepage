@@ -122,7 +122,8 @@ body {
   width: 400px;
   height: 500px;
   background-image: url(../assests/login_panel_bg.png);
-  background-size: 400px 500px;
+  background-size: 400px 430px;
+  background-repeat: no-repeat;
   /* background: white; */
   /* border-radius: 10px; */
   /* box-shadow: 0 0 10px; */
@@ -461,6 +462,13 @@ input[type="radio"] {
 
 #slider_current_text {
   color: white;
+}
+
+.slider_container {
+  margin-top: 110px;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* animations */
