@@ -349,7 +349,7 @@ form {
 #image_slide1,
 #image_slide2 {
   transform: scale(0);
-  transition: transform 2s;
+  transition: transform 1s;
   position: absolute;
   top: 88px;
   width: 150px;
