@@ -97,6 +97,8 @@ body {
 }
 
 .card {
+  top: 100px;
+  left: 100px;
   height: 300px;
   width: 300px;
   transition: clip-path 1s;
@@ -155,9 +157,9 @@ body {
 /* login modal position */
 
 .modal {
-  position: fixed;
-  top: 204px;
-  left: 261px;
+  position: absolute;
+  top: 50px;
+  left: 0;
   z-index: 1055;
   display: none;
   width: 100%;
