@@ -7,6 +7,7 @@
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+  font-family: "Inter", sans-serif;
 }
 
 html {
@@ -463,7 +464,7 @@ input[type="radio"] {
 
 #slider_btn {
   background-color: white;
-  background-size: 20px 40.5px;
+  background-size: 20px 39.5px;
   background-image: url(../assests/login_slider_icon.png);
   padding: 10px;
   margin-top: -15px;

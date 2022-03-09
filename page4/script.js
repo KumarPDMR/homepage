@@ -1,12 +1,13 @@
 var stopImageSliderAnim = false;
 var loginClicked = 0;
+var imageSlideTimeout = null;
+var imageChangeTimeout = null;
 
 $(document).ready(() => {
   $(document).click(function (e) {
     var container = $(".modal");
 
-
-    if ($(e.target).attr("id")  === "login_btn" && loginClicked !== 2) {
+    if ($(e.target).attr("id") === "login_btn" && loginClicked !== 2) {
       loginClicked++;
       return;
     }
@@ -94,6 +95,12 @@ function initModalAnim() {
     }
     modalEl.removeAttr("data-end-hide");
     stopImageSliderAnim = false;
+    if (imageChangeTimeout !== null) {
+      clearTimeout(imageChangeTimeout);
+    }
+    if (imageSlideTimeout !== null) {
+      clearTimeout(imageSlideTimeout);
+    }
   });
 
   modalEl.on("animationend", function () {
@@ -119,7 +126,7 @@ function startImageSlide() {
   $("#img1").prop("checked", true);
   $("#img2").prop("checked", false);
 
-  setTimeout(() => {
+  imageChangeTimeout = setTimeout(() => {
     $("#image_slide2").prop("src", "../assests/pdmr_logo_animation.gif");
     $("#image_slide2").prop("src", "../assests/compuscript_logo_animation.gif");
 
@@ -127,7 +134,7 @@ function startImageSlide() {
     $("#img1").prop("checked", false);
   }, 6800);
 
-  setTimeout(() => {
+  imageSlideTimeout = setTimeout(() => {
     startImageSlide();
   }, 13000);
 }

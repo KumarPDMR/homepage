@@ -92,6 +92,12 @@ body {
   border-radius: 3.3rem;
 }
 
+.login_btn_hover:hover {
+  background-color: transparent;
+  color: #2196f3 !important;
+  border: 1px solid #2196f3;
+}
+
 #main_container {
   height: 85%;
 }
@@ -155,7 +161,6 @@ body {
 }
 
 /* login modal position */
-
 
 .modal {
   position: absolute;
@@ -236,7 +241,7 @@ form {
   border-bottom: 1px solid #aaa;
   padding: 10px;
   /* padding: 1em 0.5em 0.5em; */
-  padding-left: 2em;
+  /* padding-left: 2em; */
   outline: none;
   margin: 0.5rem auto;
   transition: all 0.5s ease;
