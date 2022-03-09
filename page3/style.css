@@ -455,8 +455,8 @@ input[type="radio"] {
 }
 
 #slider_btn {
-  /* background-color: #385172; */
-  background-size: 21px 41px;
+  background-color: white;
+  background-size: 20px 40.5px;
   background-image: url(../assests/login_slider_icon.png);
   padding: 10px;
   margin-top: -15px;

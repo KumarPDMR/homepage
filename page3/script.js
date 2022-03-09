@@ -5,10 +5,27 @@ var changeImgTimeout = null;
 var changeImgTimeout1 = null;
 var slideDownTimeout = null;
 var gifAnimTimeout = null;
+var isLoginFormOpened = false;
 
 $(document).ready(() => {
+  $(document).click(function (e) {
+    let loginBox = $("#login_show_form");
+    let loginForm = $(".box");
+
+    if (!isLoginFormOpened) return;
+
+    // if the target of the click isn't the container nor a descendant of the container
+    if (
+      !loginBox.is(e.target) &&
+      loginBox.has(e.target).length === 0 &&
+      !loginForm.is(e.target) &&
+      loginForm.has(e.target).length === 0
+    ) {
+      onLoginCloseClicked();
+    }
+  });
+
   $("#login_show_form").click(onLoginButtonClicked);
-  $(".closeIcon").click(onLoginCloseClicked);
 
   initSlider();
   changeImg();
@@ -17,17 +34,9 @@ $(document).ready(() => {
 function changeImg() {
   if (stopChangeImg) return;
 
-  // $(`.img-1>div>img`).attr({ height: "200px" });
   $(`.img-1>div>img`).attr("src", "../assests/cops_logo_anim_new.gif");
   $(`.img-2>div>img`).attr("src", "../assests/pdmr_logo_animation.gif");
   $(`.img-3>div>img`).attr("src", "../assests/compuscript_logo_animation.gif");
-
-  // setTimeout(() => {
-  //   $(`.img-1>div>img`).attr({ height: "140px" });
-  //   $(`.img-1>div>img`).attr("src", "../assests/COPS_Static-logo_200pix.png");
-  //   $(`.img-2>div>img`).attr("src", "../assests/pdmr_logo.png");
-  //   $(`.img-3>div>img`).attr("src", "../assests/comp_logo.png");
-  // }, 5500);
 
   setTimeout(() => {
     if (index === 3) {
@@ -36,10 +45,18 @@ function changeImg() {
       index = index + 1;
     }
 
+    for (let i = 0; i < imageList.length; i++) {
+      const element = imageList[i];
+      if (i !== index - 1) {
+        $(`#${imageList[i]}`).prop("checked", false);
+      }
+    }
+
     $(`#${imageList[index - 1]}`).prop("checked", true);
   }, 6300);
 
   setTimeout(() => {
+    if (stopChangeImg) return;
     changeImg();
   }, 6800);
 }
@@ -50,56 +67,40 @@ function onLoginButtonClicked() {
   $(".img-2").hide();
   $(".img-3").hide();
 
-  // $(`#three`).prop("checked", true);
   $(`.img-1>div>img`).css({ width: "", height: "", margin: "100px 23px" });
   $(`.img-1>div>img`).attr("src", "../assests/COPS_Static-logo_200pix.png");
 
-  $("#login_show_form").addClass("rotateUp");
+  $("#login_show_form").removeClass("animate__animated animate__rotateIn");
+  $("#login_show_form").addClass("animate__animated animate__rotateOut");
 
-  // setTimeout(function () {
   $(".box").css("display", "");
+  $(".box").removeClass("animate__animated animate__rotateOut");
   $(".box").addClass("animate__animated animate__rotateIn");
-  // }, 500);
+
+  isLoginFormOpened = true;
 }
 
 function onLoginCloseClicked() {
-  $("#login_show_form").fadeIn();
-  $(".box").fadeOut();
-  $(".closeIcon").fadeOut();
-  $(".hide-top").hide();
-
-  $("#login_show_form").css({ transform: "scale(1)", "border-radius": "50%" });
-  setTimeout(() => {
-    $("#login_show_form>img").show();
-    $("#login_show_form").css("box-shadow", "");
-    $("#login_show_form").css("background-color", "transparent");
-  }, 1000);
+  $(".box").removeClass("animate__animated animate__rotateIn");
+  $(".box").addClass("animate__animated animate__rotateOut");
+  $("#login_show_form").removeClass("animate__animated animate__rotateOut");
+  $("#login_show_form").addClass("animate__animated animate__rotateIn");
+  isLoginFormOpened = false;
 
   stopChangeImg = false;
-  i = 1;
-
-  // $(".image_slide1").css("z-index", "2");
-  // $(".image_slide2").css("z-index", "1");
-  // $(".image_slide3").css("z-index", "-3");
-
+  $(`#${imageList[index - 1]}`).prop("checked", true);
   $(".img-2").show();
   $(".img-3").show();
 
-  $(`#${imageList[index - 1]}`).prop("checked", true);
-
-  // $(".image_slide1>div>img").attr("src", "COPS-LOGO.png");
-  $(".img-1>div>img").attr("src", "cops_logo_anim_new.gif");
   $(`.img-1>div>img`).css({
     width: "200px",
     height: "200px",
-    margin: "100px 33px",
+    margin: "100px 23px",
   });
-
-  if (changeImgTimeout !== null) {
-    clearTimeout(changeImgTimeout);
-    changeImgTimeout = null;
-  }
-  changeImgTimeout = setTimeout("changeImg()", 5500);
+  
+  $(`.img-1>div>img`).attr("src", "../assests/cops_logo_anim_new.gif");
+  index = 1;
+  changeImg();
 }
 
 function initSlider() {
