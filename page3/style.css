@@ -430,6 +430,7 @@ input[type="radio"] {
 
 .login_form_btn {
   color: white;
+  font-weight: 600;
   /* background: #385172; */
   padding: 9px 15px;
   border-radius: 20px;
