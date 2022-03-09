@@ -6,6 +6,8 @@ var changeImgTimeout1 = null;
 var slideDownTimeout = null;
 var gifAnimTimeout = null;
 var isLoginFormOpened = false;
+var imageSlideTimeout = null;
+var imageSlideChangeTimeout = null;
 
 $(document).ready(() => {
   $(document).click(function (e) {
@@ -38,7 +40,7 @@ function changeImg() {
   $(`.img-2>div>img`).attr("src", "../assests/pdmr_logo_animation.gif");
   $(`.img-3>div>img`).attr("src", "../assests/compuscript_logo_animation.gif");
 
-  setTimeout(() => {
+  imageSlideChangeTimeout = setTimeout(() => {
     if (index === 3) {
       index = 1;
     } else {
@@ -55,7 +57,12 @@ function changeImg() {
     $(`#${imageList[index - 1]}`).prop("checked", true);
   }, 6300);
 
-  setTimeout(() => {
+  if (imageSlideTimeout !== null) {
+    console.log("time is set");
+    clearTimeout(imageSlideTimeout);
+  }
+
+  imageSlideTimeout = setTimeout(() => {
     if (stopChangeImg) return;
     changeImg();
   }, 6800);
@@ -67,8 +74,13 @@ function onLoginButtonClicked() {
   $(".img-2").hide();
   $(".img-3").hide();
 
-  $(`.img-1>div>img`).css({ width: "", height: "", margin: "100px 23px" });
   $(`.img-1>div>img`).attr("src", "../assests/COPS_Static-logo_200pix.png");
+  $(`.img-1>div>img`).css({
+    width: "",
+    height: "",
+    margin: "100px 23px",
+    overflow: "hidden",
+  });
 
   $("#login_show_form").removeClass("animate__animated animate__rotateIn");
   $("#login_show_form").addClass("animate__animated animate__rotateOut");
@@ -77,6 +89,14 @@ function onLoginButtonClicked() {
   $(".box").removeClass("animate__animated animate__rotateOut");
   $(".box").addClass("animate__animated animate__rotateIn");
 
+  if (!imageSlideTimeout) {
+    console.log("xmsmxskx");
+    clearTimeout(imageSlideTimeout);
+  }
+
+  if (imageSlideChangeTimeout !== null) {
+    clearTimeout(imageSlideChangeTimeout);
+  }
   isLoginFormOpened = true;
 }
 
@@ -88,7 +108,7 @@ function onLoginCloseClicked() {
   isLoginFormOpened = false;
 
   stopChangeImg = false;
-  $(`#${imageList[index - 1]}`).prop("checked", true);
+  $(`#one`).prop("checked", true);
   $(".img-2").show();
   $(".img-3").show();
 
@@ -131,14 +151,13 @@ function initSlider() {
         $("#non").css("transition", "all 2s");
         $("#non").css("transform", "translateY(-28px)");
         $("#slider_current_text").css("transform", "translateY(10px)");
-      $("#slider_current_text").attr("id", "non");
-      $(".unique_1").attr("id", "slider_current_text");
-    }, 10);
+        $("#slider_current_text").attr("id", "non");
+        $(".unique_1").attr("id", "slider_current_text");
+      }, 10);
 
       // $("#slider_current_text").css("transform", "translateY(10px)");
       // $("#non").css("transform", "translateY(-28px)");
       // $("#non").addClass("unique_1");
-
     }
 
     // if (curText.trim() === "Books") {

@@ -237,6 +237,7 @@ h3 {
   background-image: url("../assests/Logo-animation-window.png");
   background-size: 330px 500px;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 .wrapper {
@@ -261,6 +262,11 @@ h3 {
   object-fit: cover;
   clip-path: circle(0% at 0% 100%);
   transition: all 2s;
+  overflow: hidden;
+}
+
+.img {
+  overflow: hidden;
 }
 
 #one:checked ~ .img-1 div {
