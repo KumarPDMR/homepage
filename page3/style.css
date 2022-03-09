@@ -462,6 +462,7 @@ input[type="radio"] {
   margin-top: -15px;
   margin-left: -10px;
   border: 1px solid white;
+  background-repeat: no-repeat;
   /* border-radius: 40%; */
   /* background: transparent; */
 }
@@ -477,7 +478,7 @@ input[type="radio"] {
 
 #slider_list > li {
   transition: all 2s;
-  transform: translateY(-28px);
+  transform: translateY(-50px);
   color: white;
 }
 

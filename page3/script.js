@@ -107,21 +107,39 @@ function initSlider() {
   $("#slider_btn").click(function () {
     let curText = $("#slider_current_text").text();
 
+    console.log(curText);
+
     if (curText.trim() === "Books") {
-      $("#slider_list").append(
-        "<li style='transform: translateY(-50px);'>Journals</li>"
-      );
+      // $("#slider_current_text").css("transition", "none");
+      $("#non").css("transition", "none");
+
+      $("#non").css("transform", "translateY(-80px)");
+      // $("#non").css("transform", "translateY(-70px)");
+      setTimeout(() => {
+        $("#non").css("transition", "all 2s");
+        $("#non").css("transform", "translateY(-50px)");
+        $("#slider_current_text").css("transform", "translateY(10px)");
+        $("#non").attr("id", "slider_current_text");
+        $(".unique_1").attr("id", "non");
+      }, 10);
     } else {
-      $("#slider_list").append(
-        "<li style='transform: translateY(-50px);'>Books</li>"
-      );
+      $("#non").css("transition", "none");
+
+      $("#non").css("transform", "translateY(-70px)");
+
+      setTimeout(() => {
+        $("#non").css("transition", "all 2s");
+        $("#non").css("transform", "translateY(-28px)");
+        $("#slider_current_text").css("transform", "translateY(10px)");
+      $("#slider_current_text").attr("id", "non");
+      $(".unique_1").attr("id", "slider_current_text");
+    }, 10);
+
+      // $("#slider_current_text").css("transform", "translateY(10px)");
+      // $("#non").css("transform", "translateY(-28px)");
+      // $("#non").addClass("unique_1");
+
     }
-
-    $("#slider_list>li").css("transform", "translateY(-50px)");
-    $("#slider_list").children().eq(0).remove();
-          $("#slider_current_text").attr("id", "");
-      $("#slider_list").children().eq(1).attr("id", "slider_current_text");
-
 
     // if (curText.trim() === "Books") {
     //   $("#slider_list>li").css("transform", "translateY(-50px)");
