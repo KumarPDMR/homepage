@@ -97,7 +97,7 @@ function onLoginCloseClicked() {
     height: "200px",
     margin: "100px 23px",
   });
-  
+
   $(`.img-1>div>img`).attr("src", "../assests/cops_logo_anim_new.gif");
   index = 1;
   changeImg();
@@ -108,13 +108,32 @@ function initSlider() {
     let curText = $("#slider_current_text").text();
 
     if (curText.trim() === "Books") {
-      $("#slider_list>li").css("transform", "translateY(-52px)");
-      $("#slider_current_text").attr("id", "");
-      $("#slider_list").children().eq(1).attr("id", "slider_current_text");
+      $("#slider_list").append(
+        "<li style='transform: translateY(-50px);'>Journals</li>"
+      );
     } else {
-      $("#slider_list>li").css("transform", "translateY(-28px)");
-      $("#slider_current_text").attr("id", "");
-      $("#slider_list").children().eq(0).attr("id", "slider_current_text");
+      $("#slider_list").append(
+        "<li style='transform: translateY(-50px);'>Books</li>"
+      );
     }
+
+    $("#slider_list>li").css("transform", "translateY(-50px)");
+    $("#slider_list").children().eq(0).remove();
+          $("#slider_current_text").attr("id", "");
+      $("#slider_list").children().eq(1).attr("id", "slider_current_text");
+
+
+    // if (curText.trim() === "Books") {
+    //   $("#slider_list>li").css("transform", "translateY(-50px)");
+    //   $("#slider_list").append("<li style='transform: translateY(-50px)'>Books</li>");
+    //   $("#slider_list").children().eq(1).attr("id", "slider_current_text");
+    //   // $("#slider_list").children().eq(0).remove();
+    // } else {
+    //   $("#slider_list").css("transform", "translateY(-50px)");
+    //   $("#slider_list").append("<li style='transform: translateY(-50px)'>Journals</li>");
+    //   $("#slider_current_text").attr("id", "");
+    //   $("#slider_list").children().eq(1).attr("id", "slider_current_text");
+    //   // $("#slider_list").children().eq(0).remove();
+    // }
   });
 }

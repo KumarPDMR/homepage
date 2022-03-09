@@ -119,10 +119,10 @@ body {
 }
 
 .box {
-  width: 400px;
-  height: 500px;
+  width: 340px;
+  height: 450px;
   background-image: url(../assests/login_panel_bg.png);
-  background-size: 400px 430px;
+  background-size: 350px 388px;
   background-repeat: no-repeat;
   /* background: white; */
   /* border-radius: 10px; */
@@ -431,11 +431,11 @@ input[type="radio"] {
 .login_form_btn {
   color: white;
   /* background: #385172; */
-  padding: 14px 15px;
+  padding: 9px 15px;
   border-radius: 20px;
   border-top-left-radius: 0;
   width: 57%;
-  margin: 20px 84px;
+  margin: 0 75px;
   font-size: 13px;
   border-top-right-radius: 0;
   background-color: transparent;
@@ -478,10 +478,10 @@ input[type="radio"] {
 #slider_list > li {
   transition: all 2s;
   transform: translateY(-28px);
+  color: white;
 }
 
 #slider_current_text {
-  color: white;
 }
 
 .slider_container {
