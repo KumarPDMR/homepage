@@ -121,7 +121,7 @@ body {
 
 .box {
   width: 340px;
-  height: 450px;
+  height: 400px;
   background-image: url(../assests/login_panel_bg.png);
   background-size: 350px 388px;
   background-repeat: no-repeat;
@@ -272,20 +272,17 @@ h3 {
 
 #one:checked ~ .img-1 div {
   clip-path: circle(150% at 0% 100%);
-  background-color: #75caf1;
 }
 
 #two:checked ~ .img-1 div,
 #two:checked ~ .img-2 div {
   clip-path: circle(150% at 0% 100%);
-  background-color: #75caf1;
 }
 
 #three:checked ~ .img-1 div,
 #three:checked ~ .img-2 div,
 #three:checked ~ .img-3 div {
   clip-path: circle(150% at 0% 100%);
-  background-color: #75caf1;
 }
 
 .wrapper .sliders {
