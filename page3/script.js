@@ -75,7 +75,6 @@ function onLoginButtonClicked() {
   $(".img-3").hide();
 
   $(`.img-1>div>img`).attr("src", "");
-
   $(`.img-1>div>img`).attr("src", "../assests/COPS_Static-logo_200pix.png");
   $(`.img-1>div>img`).css({
     width: "",
