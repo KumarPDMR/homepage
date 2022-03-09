@@ -90,7 +90,6 @@ function onLoginButtonClicked() {
   $(".box").addClass("animate__animated animate__rotateIn");
 
   if (!imageSlideTimeout) {
-    console.log("xmsmxskx");
     clearTimeout(imageSlideTimeout);
   }
 
